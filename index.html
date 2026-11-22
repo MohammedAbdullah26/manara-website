@@ -1,11 +1,11 @@
 <!doctype html>
 <!--
-  Manara download page. A single static page: no build step.
+  Manara download page, in English. The Arabic page is ar.html; both use style.css.
 
-  When you publish a new APK, update the three things marked "UPDATE" below:
+  When you publish a new APK, update the places marked "UPDATE" in BOTH pages:
   the download link, the version, and the file size.
 -->
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -15,168 +15,20 @@
   <link rel="icon" type="image/png" href="logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa&family=Fraunces:opsz,wght@9..144,500&display=swap" rel="stylesheet" />
-  <style>
-    /* Manara's day and night colours, from app/src/main/java/com/wss/manara/ui/theme/Color.kt */
-    :root {
-      --page: #E6F1FB;      /* DaySky */
-      --sea: #D6E7F7;       /* DaySea */
-      --card: #FFFFFF;
-      --text: #0B1A2E;      /* Navy */
-      --text-2: #185FA5;    /* DeepBlue */
-      --accent: #854F0B;    /* DarkAmber */
-      --button: #EF9F27;    /* Amber */
-      --on-button: #412402; /* AmberInk */
-      --line: #B9D3EE;
-      --shadow: 0 18px 40px rgba(11, 26, 46, 0.18);
-      color-scheme: light;
-    }
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --page: #0B1A2E;      /* Navy */
-        --sea: #0E2742;       /* Sea */
-        --card: #1B2F4A;      /* NavyRaised */
-        --text: #FAEEDA;      /* WarmWhite */
-        --text-2: #85B7EB;    /* SkyBlue */
-        --accent: #FAC775;    /* Gold */
-        --button: #FAC775;    /* Gold */
-        --on-button: #412402; /* AmberInk */
-        --line: #24405F;
-        --shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
-        color-scheme: dark;
-      }
-    }
-
-    * { box-sizing: border-box; }
-    html { -webkit-text-size-adjust: 100%; }
-    body {
-      margin: 0;
-      background: var(--page);
-      color: var(--text);
-      font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    }
-    a { color: var(--text-2); }
-    .wrap { max-width: 960px; margin: 0 auto; padding: 0 20px; }
-
-    /* Hero */
-    header { padding: 56px 0 40px; }
-    .hero {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 40px;
-      align-items: center;
-    }
-    .brand { display: flex; align-items: center; gap: 16px; margin-bottom: 20px; }
-    .brand img { width: 72px; height: 72px; border-radius: 18px; box-shadow: var(--shadow); }
-    h1 {
-      font-family: "Fraunces", Georgia, serif;
-      font-weight: 500;
-      font-size: 44px;
-      line-height: 1.05;
-      margin: 0;
-    }
-    .arabic-name {
-      font-family: "Aref Ruqaa", serif;
-      color: var(--accent);
-      font-size: 26px;
-      line-height: 1.2;
-      display: block;
-    }
-    .tagline { font-size: 20px; line-height: 1.45; margin: 0 0 12px; }
-    .lede { color: var(--text-2); margin: 0 0 28px; }
-
-    .download {
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      background: var(--button);
-      color: var(--on-button);
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 18px;
-      padding: 16px 28px;
-      border-radius: 999px;
-      box-shadow: var(--shadow);
-      transition: transform 0.15s ease, filter 0.15s ease;
-    }
-    .download:hover { transform: translateY(-2px); filter: brightness(1.05); }
-    .download:focus-visible { outline: 3px solid var(--text-2); outline-offset: 3px; }
-    .download svg { width: 22px; height: 22px; flex: none; }
-    .meta { color: var(--text-2); font-size: 14px; margin: 14px 0 0; }
-    .desktop-hint { display: none; font-size: 14px; margin: 6px 0 0; color: var(--text-2); }
-    .is-desktop .desktop-hint { display: block; }
-
-    .shots { display: flex; justify-content: center; gap: 18px; }
-    .shots img {
-      width: 46%;
-      max-width: 220px;
-      height: auto;
-      border-radius: 22px;
-      border: 6px solid var(--card);
-      box-shadow: var(--shadow);
-    }
-    .shots img:nth-child(2) { margin-top: 48px; }
-
-    /* Sections */
-    section { padding: 40px 0; border-top: 1px solid var(--line); }
-    h2 {
-      font-family: "Fraunces", Georgia, serif;
-      font-weight: 500;
-      font-size: 28px;
-      margin: 0 0 20px;
-    }
-    .steps { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; counter-reset: step; }
-    .steps li {
-      counter-increment: step;
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      padding: 16px 18px 16px 64px;
-      position: relative;
-    }
-    .steps li::before {
-      content: counter(step);
-      position: absolute;
-      left: 18px;
-      top: 14px;
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      background: var(--sea);
-      color: var(--accent);
-      font-weight: 700;
-      display: grid;
-      place-items: center;
-    }
-    .notes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-    .note { background: var(--sea); border-radius: 16px; padding: 18px; }
-    .note h3 { margin: 0 0 6px; font-size: 16px; color: var(--accent); }
-    .note p { margin: 0; font-size: 15px; }
-
-    footer { padding: 32px 0 48px; color: var(--text-2); font-size: 14px; border-top: 1px solid var(--line); }
-
-    @media (max-width: 760px) {
-      header { padding: 32px 0 28px; }
-      .hero { grid-template-columns: 1fr; gap: 36px; }
-      h1 { font-size: 38px; }
-      .tagline { font-size: 18px; }
-      .download { width: 100%; justify-content: center; }
-      .notes { grid-template-columns: 1fr; }
-      .shots img:nth-child(2) { margin-top: 32px; }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      .download { transition: none; }
-      .download:hover { transform: none; }
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa&family=El+Messiri:wght@600&family=Fraunces:opsz,wght@9..144,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="wrap">
+    <nav class="topbar" aria-label="Language">
+      <a class="lang-switch" href="ar.html" lang="ar" hreflang="ar">العربية</a>
+    </nav>
+
     <div class="hero">
       <div>
         <div class="brand">
           <img src="logo.png" alt="" width="72" height="72" />
-          <h1>Manara <span class="arabic-name" lang="ar">منارة</span></h1>
+          <h1>Manara <span class="alt-name" lang="ar">منارة</span></h1>
         </div>
         <p class="tagline">A Wi-Fi security scanner for Android that checks a network before you trust it.</p>
         <p class="lede">

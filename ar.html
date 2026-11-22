@@ -1,0 +1,100 @@
+<!doctype html>
+<!--
+  Manara download page, in Arabic (right to left). The English page is index.html; both use style.css.
+
+  When you publish a new APK, update the places marked "UPDATE" in BOTH pages:
+  the download link, the version, and the file size.
+-->
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>منارة – تنزيل التطبيق لأندرويد</title>
+  <meta name="description" content="منارة تطبيق أندرويد لفحص أمان شبكات الواي فاي قبل أن تثق بها. نزّل ملف APK." />
+  <meta name="theme-color" content="#0B1A2E" />
+  <link rel="icon" type="image/png" href="logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa&family=El+Messiri:wght@400;600;700&family=Fraunces:opsz,wght@9..144,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="wrap">
+    <nav class="topbar" aria-label="اللغة">
+      <a class="lang-switch" href="index.html" lang="en" hreflang="en">English</a>
+    </nav>
+
+    <div class="hero">
+      <div>
+        <div class="brand">
+          <img src="logo.png" alt="" width="72" height="72" />
+          <h1>منارة <span class="alt-name" lang="en">Manara</span></h1>
+        </div>
+        <p class="tagline">تطبيق أندرويد لفحص أمان شبكات الواي فاي، يفحص الشبكة قبل أن تثق بها.</p>
+        <p class="lede">
+          تكشف منارة النسخ المزيفة من الشبكات ونقاط الاتصال الخطرة قبل أن تنضم إليها، وتفحص الشبكة
+          المتصل بها، وتساعدك على الوصول إلى الراوتر برادار على الشاشة. وكل ذلك يعمل على هاتفك.
+        </p>
+
+        <!-- UPDATE: the download link -->
+        <a class="download" href="Manara.apk" download>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 3v12" /><path d="m7 10 5 5 5-5" /><path d="M5 21h14" />
+          </svg>
+          تنزيل لأندرويد
+        </a>
+        <!-- UPDATE: the version and the file size -->
+        <p class="meta">الإصدار 1.0 · ملف APK · ‏164 ميغابايت · أندرويد 7.0 أو أحدث</p>
+        <p class="desktop-hint">تتصفح من حاسوب؟ افتح هذه الصفحة على هاتف أندرويد لتثبيت التطبيق.</p>
+      </div>
+
+      <div class="shots">
+        <img src="screenshots/scan-limit.png" width="540" height="1200"
+             alt="تبويب الشبكات في منارة ليلًا، ويظهر فيه الشبكة المتصل بها وتقييم المنطقة" />
+        <img src="screenshots/settings-tab.png" width="540" height="1200"
+             alt="تبويب الإعدادات في منارة نهارًا، وفيه الكشف المتقدم وبطاقة حول التطبيق" />
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="wrap" aria-labelledby="install">
+      <h2 id="install">طريقة التثبيت</h2>
+      <ol class="steps">
+        <li>اضغط <strong>تنزيل لأندرويد</strong> وانتظر حتى يكتمل تنزيل الملف.</li>
+        <li>افتح <strong><bdi>Manara.apk</bdi></strong> من إشعار التنزيل، أو من مجلد التنزيلات في تطبيق الملفات.</li>
+        <li>إذا أخبرك أندرويد أن المتصفح غير مسموح له بتثبيت التطبيقات، فاضغط <strong>الإعدادات</strong>، وفعّل <strong>السماح من هذا المصدر</strong>، ثم ارجع.</li>
+        <li>اضغط <strong>تثبيت</strong>. وإذا حذّرك Play Protect من تطبيق غير معروف، فاضغط <strong>مزيد من التفاصيل</strong>، ثم <strong>التثبيت على أي حال</strong>.</li>
+        <li>افتح منارة واسمح بالموقع <strong>الدقيق</strong>. لا يعطي أندرويد نتائج فحص الواي فاي إلا للتطبيقات التي لديها هذا الإذن.</li>
+      </ol>
+    </section>
+
+    <section class="wrap" aria-labelledby="good-to-know">
+      <h2 id="good-to-know">معلومات مهمة</h2>
+      <div class="notes">
+        <div class="note">
+          <h3>ليس من متجر Google Play</h3>
+          <p>هذه نسخة تجريبية من مشروع طلابي، نشاركها كملف APK، ولهذا يسألك أندرويد قبل تثبيتها.</p>
+        </div>
+        <div class="note">
+          <h3>ظهرت رسالة «لم يتم تثبيت التطبيق»؟</h3>
+          <p>على هاتفك نسخة أقدم من منارة بُنيت على حاسوب آخر. احذفها أولًا، ثم ثبّت هذه النسخة.</p>
+        </div>
+        <div class="note">
+          <h3>بياناتك تبقى على هاتفك</h3>
+          <p>يعمل الفحص والتقييم ونموذج الذكاء الاصطناعي على الهاتف. أما البلاغات عبر الإنترنت والنسخ الاحتياطي السحابي فمتوقفة حتى تسجّل الدخول وتفعّلها.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    منارة · طوّرها فريق <bdi>SDP-G25</bdi>
+  </footer>
+
+  <script>
+    // Show the "open this on your phone" hint everywhere except Android.
+    if (!/Android/i.test(navigator.userAgent)) document.body.classList.add("is-desktop");
+  </script>
+</body>
+</html>

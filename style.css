@@ -1,0 +1,187 @@
+/* Shared by index.html (English) and ar.html (Arabic, right to left). */
+
+/* Manara's day and night colours, from the app's ui/theme/Color.kt */
+:root {
+  --page: #E6F1FB;      /* DaySky */
+  --sea: #D6E7F7;       /* DaySea */
+  --card: #FFFFFF;
+  --text: #0B1A2E;      /* Navy */
+  --text-2: #185FA5;    /* DeepBlue */
+  --accent: #854F0B;    /* DarkAmber */
+  --button: #EF9F27;    /* Amber */
+  --on-button: #412402; /* AmberInk */
+  --line: #B9D3EE;
+  --shadow: 0 18px 40px rgba(11, 26, 46, 0.18);
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --page: #0B1A2E;      /* Navy */
+    --sea: #0E2742;       /* Sea */
+    --card: #1B2F4A;      /* NavyRaised */
+    --text: #FAEEDA;      /* WarmWhite */
+    --text-2: #85B7EB;    /* SkyBlue */
+    --accent: #FAC775;    /* Gold */
+    --button: #FAC775;    /* Gold */
+    --on-button: #412402; /* AmberInk */
+    --line: #24405F;
+    --shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+    color-scheme: dark;
+  }
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--page);
+  color: var(--text);
+  font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+/* Arabic text uses El Messiri, as in the app. */
+html[lang="ar"] body,
+.lang-switch:lang(ar) {
+  font-family: "El Messiri", system-ui, -apple-system, "Segoe UI", Tahoma, sans-serif;
+}
+html[lang="ar"] body { line-height: 1.8; }
+a { color: var(--text-2); }
+.wrap { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+
+/* Language switch */
+.topbar { display: flex; justify-content: flex-end; padding-top: 20px; }
+.lang-switch {
+  display: inline-block;
+  padding: 4px 16px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--card);
+  color: var(--text-2);
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.lang-switch:hover { border-color: var(--text-2); }
+.lang-switch:focus-visible { outline: 3px solid var(--text-2); outline-offset: 2px; }
+
+/* Hero */
+header { padding-bottom: 40px; }
+.hero {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 40px;
+  align-items: center;
+  margin-top: 24px;
+}
+.brand { display: flex; align-items: center; gap: 16px; margin-bottom: 20px; }
+.brand img { width: 72px; height: 72px; border-radius: 18px; box-shadow: var(--shadow); }
+h1 {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 500;
+  font-size: 44px;
+  line-height: 1.05;
+  margin: 0;
+}
+/* The name in the other language, under the main one. */
+.alt-name {
+  display: block;
+  color: var(--accent);
+  font-family: "Aref Ruqaa", serif;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 1.2;
+}
+html[lang="ar"] h1 { font-family: "Aref Ruqaa", serif; font-weight: 400; font-size: 52px; line-height: 1.1; }
+html[lang="ar"] .alt-name { font-family: "Fraunces", Georgia, serif; font-weight: 500; font-size: 22px; }
+
+.tagline { font-size: 20px; line-height: 1.45; margin: 0 0 12px; }
+html[lang="ar"] .tagline { line-height: 1.7; }
+.lede { color: var(--text-2); margin: 0 0 28px; }
+
+.download {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--button);
+  color: var(--on-button);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 18px;
+  padding: 16px 28px;
+  border-radius: 999px;
+  box-shadow: var(--shadow);
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+.download:hover { transform: translateY(-2px); filter: brightness(1.05); }
+.download:focus-visible { outline: 3px solid var(--text-2); outline-offset: 3px; }
+.download svg { width: 22px; height: 22px; flex: none; }
+.meta { color: var(--text-2); font-size: 14px; margin: 14px 0 0; }
+.desktop-hint { display: none; font-size: 14px; margin: 6px 0 0; color: var(--text-2); }
+.is-desktop .desktop-hint { display: block; }
+
+.shots { display: flex; justify-content: center; gap: 18px; }
+.shots img {
+  width: 46%;
+  max-width: 220px;
+  height: auto;
+  border-radius: 22px;
+  border: 6px solid var(--card);
+  box-shadow: var(--shadow);
+}
+.shots img:nth-child(2) { margin-top: 48px; }
+
+/* Sections */
+section { padding: 40px 0; border-top: 1px solid var(--line); }
+h2 {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 500;
+  font-size: 28px;
+  margin: 0 0 20px;
+}
+html[lang="ar"] h2 { font-family: "El Messiri", serif; font-weight: 600; }
+.steps { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; counter-reset: step; }
+.steps li {
+  counter-increment: step;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding-block: 16px;
+  padding-inline: 64px 18px;
+  position: relative;
+}
+.steps li::before {
+  content: counter(step);
+  position: absolute;
+  inset-inline-start: 18px;
+  top: 14px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--sea);
+  color: var(--accent);
+  font-weight: 700;
+  line-height: 1;
+  display: grid;
+  place-items: center;
+}
+html[lang="ar"] .steps li::before { top: 18px; }
+.notes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.note { background: var(--sea); border-radius: 16px; padding: 18px; }
+.note h3 { margin: 0 0 6px; font-size: 16px; color: var(--accent); }
+.note p { margin: 0; font-size: 15px; }
+
+footer { padding: 32px 0 48px; color: var(--text-2); font-size: 14px; border-top: 1px solid var(--line); }
+
+@media (max-width: 760px) {
+  header { padding-bottom: 28px; }
+  .hero { grid-template-columns: 1fr; gap: 36px; margin-top: 12px; }
+  h1 { font-size: 38px; }
+  html[lang="ar"] h1 { font-size: 46px; }
+  .tagline { font-size: 18px; }
+  .download { width: 100%; justify-content: center; }
+  .notes { grid-template-columns: 1fr; }
+  .shots img:nth-child(2) { margin-top: 32px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .download { transition: none; }
+  .download:hover { transform: none; }
+}
