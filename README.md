@@ -29,8 +29,7 @@ its full URL in the download link in both pages.
 ## Releasing a new version
 
 In both `index.html` and `ar.html`, update the places marked `UPDATE`: the download link
-(only if the APK
-isn't next to the page), the version and the file size.
+(only if the APK isn't next to the page), the version and the file size.
 
 ## Preview it on your computer
 
