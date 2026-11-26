@@ -1,100 +1,170 @@
 <!doctype html>
-<!--
-  Manara download page, in Arabic (right to left). The English page is index.html; both use style.css.
-
-  When you publish a new APK (see README.md), update the version and the file size marked
-  "UPDATE" in BOTH pages. The download link follows the newest GitHub Release by itself.
--->
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>منارة – تنزيل التطبيق لأندرويد</title>
-  <meta name="description" content="منارة تطبيق أندرويد لفحص أمان شبكات الواي فاي قبل أن تثق بها. نزّل ملف APK." />
-  <meta name="theme-color" content="#0B1A2E" />
+  <title>منارة: افحص شبكة الواي&nbsp;فاي قبل أن تثق بها</title>
+  <meta name="description" content="منارة تطبيق أندرويد لفحص أمان شبكات الواي&nbsp;فاي. تكشف النسخ المزيفة من الشبكات ونقاط الاتصال الخطرة قبل أن تنضم إليها، وتجري كل فحوصها على هاتفك." />
+  <meta name="theme-color" content="#071222" />
   <link rel="icon" type="image/png" href="logo.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa&family=El+Messiri:wght@400;600;700&family=Fraunces:opsz,wght@9..144,500&display=swap" rel="stylesheet" />
+  <link rel="preload" href="fonts/elmessiri-400.woff" as="font" type="font/woff" crossorigin />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="wrap">
-    <nav class="topbar" aria-label="اللغة">
-      <a class="lang-switch" href="index.html" lang="en" hreflang="en">English</a>
-    </nav>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="boat" viewBox="0 0 44 40">
+        <path d="M21 5v25" stroke="currentColor" stroke-width="1.4" />
+        <path d="M22.4 7 22.4 29H38Z" fill="currentColor" />
+        <path d="M19.6 11 19.6 29H9Z" fill="currentColor" opacity=".78" />
+        <path d="M4 31h36l-5 7H9Z" fill="#1B2F4A" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" />
+      </symbol>
+      <symbol id="m-secure" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#0B1A2E" stroke="#24405F" /><circle cx="12" cy="12" r="4.6" fill="#5DCAA5" /></symbol>
+      <symbol id="m-moderate" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#0B1A2E" stroke="#24405F" /><path d="M12 6.6 17 16.2H7Z" fill="#EF9F27" /></symbol>
+      <symbol id="m-vulnerable" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#0B1A2E" stroke="#24405F" /><circle cx="12" cy="8.2" r="3.4" fill="#E24B4A" /><circle cx="12" cy="15.8" r="3.4" fill="#E24B4A" /></symbol>
+      <symbol id="m-unknown" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#0B1A2E" stroke="#24405F" /><circle cx="12" cy="12" r="4.4" fill="none" stroke="#B4B2A9" stroke-width="2" /></symbol>
+      <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3.5v11.5M6.5 10l5.5 5.5 5.5-5.5M5 20.5h14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" /></symbol>
+      <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></symbol>
+    </defs>
+  </svg>
 
-    <div class="hero">
-      <div>
-        <div class="brand">
-          <img src="logo.png" alt="" width="72" height="72" />
-          <h1>منارة <span class="alt-name" lang="en">Manara</span></h1>
-        </div>
-        <p class="tagline">تطبيق أندرويد لفحص أمان شبكات الواي فاي، يفحص الشبكة قبل أن تثق بها.</p>
-        <p class="lede">
-          تكشف منارة النسخ المزيفة من الشبكات ونقاط الاتصال الخطرة قبل أن تنضم إليها، وتفحص الشبكة
-          المتصل بها، وتساعدك على الوصول إلى الراوتر برادار على الشاشة. وكل ذلك يعمل على هاتفك.
-        </p>
-
-        <!-- Always the newest GitHub Release's Manara.apk, so this link doesn't change between versions. -->
-        <a class="download" href="https://github.com/MohammedAbdullah26/manara-website/releases/latest/download/Manara.apk">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M12 3v12" /><path d="m7 10 5 5 5-5" /><path d="M5 21h14" />
-          </svg>
-          تنزيل لأندرويد
-        </a>
-        <!-- UPDATE: the version and the file size -->
-        <p class="meta">الإصدار 1.0 · ملف APK · ‏164 ميغابايت · أندرويد 7.0 أو أحدث</p>
-        <p class="desktop-hint">تتصفح من حاسوب؟ افتح هذه الصفحة على هاتف أندرويد لتثبيت التطبيق.</p>
+  <header class="hero">
+    <a class="lang-switch" href="index.html" lang="en" hreflang="en" data-lang="en">English</a>
+    <figure class="scene">
+      <div class="art" aria-hidden="true">
+        <div class="sea"></div>
+        <svg class="lighthouse" viewBox="0 0 60 240">
+          <defs><radialGradient id="glow"><stop offset="0" stop-color="#FAC775" stop-opacity=".75" /><stop offset="1" stop-color="#FAC775" stop-opacity="0" /></radialGradient></defs>
+          <circle cx="30" cy="41" r="20" fill="url(#glow)" />
+          <path d="M18 30 30 17 42 30Z" fill="#A32D2D" /><circle cx="30" cy="15" r="2.2" fill="#A32D2D" />
+          <rect x="21" y="30" width="18" height="22" rx="2" fill="#0B1A2E" stroke="#F1EFE8" stroke-width="1.4" />
+          <circle cx="30" cy="41" r="5.5" fill="#EF9F27" />
+          <path d="M25.5 31v20M34.5 31v20" stroke="#F1EFE8" stroke-width=".8" opacity=".6" />
+          <path d="M13 52.5h34M15 52.5v4M21 52.5v4M27 52.5v4M33 52.5v4M39 52.5v4M45 52.5v4" stroke="#F1EFE8" stroke-width="1.4" />
+          <rect x="14" y="56" width="32" height="6" fill="#1B2F4A" />
+          <path d="M19 62h22l2 37H17Z" fill="#F1EFE8" />
+          <path d="M17 99h26l2 37H15Z" fill="#A32D2D" />
+          <path d="M15 136h30l2 37H13Z" fill="#F1EFE8" />
+          <path d="M13 173h34l2 37H11Z" fill="#A32D2D" />
+          <rect x="28.4" y="74" width="3.2" height="9" rx="1.6" fill="#0B1A2E" /><rect x="28.4" y="148" width="3.2" height="9" rx="1.6" fill="#0B1A2E" />
+          <rect x="26.5" y="196" width="7" height="14" rx="3.5" fill="#0B1A2E" />
+          <path d="M0 240v-27q8-9 18-5 10-8 22-2 10-5 20 4v30Z" fill="#1B2F4A" />
+        </svg>
+        <svg class="boat far b-far" viewBox="0 0 44 40"><use href="#boat" /></svg>
+        <svg class="boat mid b-library" viewBox="0 0 44 40"><use href="#boat" /></svg>
+        <svg class="boat b-home" viewBox="0 0 44 40"><use href="#boat" /><circle cx="21" cy="4.6" r="2.7" fill="#EF9F27" /></svg>
+        <svg class="boat mid b-cafe" viewBox="0 0 44 40"><use href="#boat" /></svg>
+        <svg class="boat b-copy" viewBox="0 0 44 40"><use href="#boat" /><path d="M21.6 4.2 31 6.8l-9.4 2.6Z" fill="#E24B4A" /></svg>
+        <svg class="buoy b-buoy" viewBox="0 0 16 40"><circle cx="8" cy="4" r="3.2" fill="#F7C1C1" /><circle cx="8" cy="11" r="3.2" fill="#F7C1C1" /><path d="M8 14v4" stroke="#F7C1C1" stroke-width="1.4" /><path d="M3 18h10l1.5 18h-13Z" fill="#E24B4A" /><path d="M2.4 25h11.2l.5 6H1.9Z" fill="#0B1A2E" /></svg>
+        <div class="beam"></div>
       </div>
-
-      <div class="shots">
-        <img src="screenshots/scan-limit.png" width="540" height="1200"
-             alt="تبويب الشبكات في منارة ليلًا، ويظهر فيه الشبكة المتصل بها وتقييم المنطقة" />
-        <img src="screenshots/settings-tab.png" width="540" height="1200"
-             alt="تبويب الإعدادات في منارة نهارًا، وفيه الكشف المتقدم وبطاقة حول التطبيق" />
-      </div>
-    </div>
+      <ul class="tags" aria-hidden="true">
+        <li class="tag t-library"><svg><use href="#m-moderate" /></svg><span><b>المكتبة</b><span class="v-moderate">متوسطة</span> · <span class="num">62</span></span></li>
+        <li class="tag t-home"><svg><use href="#m-secure" /></svg><span><b>المنزل · متصل</b><span class="v-secure">آمنة</span> · <span class="num">84</span></span></li>
+        <li class="tag t-cafe"><svg><use href="#m-unknown" /></svg><span><b><bdi>Café Guest</bdi></b>غير معروفة</span></li>
+        <li class="tag t-copy"><svg><use href="#m-vulnerable" /></svg><span><b><bdi>Corniche</bdi> (نسخة مفتوحة)</b><span class="v-vulnerable">خطرة</span> · قد تكون مزيفة</span></li>
+      </ul>
+      <figcaption>مثال على فحص<span class="sr-only">: يمرّ شعاع منارة فوق شبكات مرسومة كقوارب. شبكة المنزل آمنة، والمكتبة متوسطة، وشبكة Café Guest غير معروفة، ونسخة مفتوحة من Corniche خطرة لأنها قد تكون مزيفة.</span></figcaption>
+    </figure>
   </header>
 
   <main>
-    <section class="wrap" aria-labelledby="install">
-      <h2 id="install">طريقة التثبيت</h2>
-      <ol class="steps">
-        <li>اضغط <strong>تنزيل لأندرويد</strong> وانتظر حتى يكتمل تنزيل الملف.</li>
-        <li>افتح <strong><bdi>Manara.apk</bdi></strong> من إشعار التنزيل، أو من مجلد التنزيلات في تطبيق الملفات.</li>
-        <li>إذا أخبرك أندرويد أن المتصفح غير مسموح له بتثبيت التطبيقات، فاضغط <strong>الإعدادات</strong>، وفعّل <strong>السماح من هذا المصدر</strong>، ثم ارجع.</li>
-        <li>اضغط <strong>تثبيت</strong>. وإذا حذّرك Play Protect من تطبيق غير معروف، فاضغط <strong>مزيد من التفاصيل</strong>، ثم <strong>التثبيت على أي حال</strong>.</li>
-        <li>افتح منارة واسمح بالموقع <strong>الدقيق</strong>. لا يعطي أندرويد نتائج فحص الواي فاي إلا للتطبيقات التي لديها هذا الإذن.</li>
-      </ol>
+    <div class="gallery wrap">
+      <div class="railing" aria-hidden="true"></div>
+      <div class="card">
+        <p class="lockup"><img src="logo.png" alt="" width="56" height="56" /><span lang="ar">منارة</span><span lang="en">Manara</span></p>
+        <h1>افحص شبكة الواي&nbsp;فاي قبل أن تثق بها.</h1>
+        <p class="lede lede-short">كل الفحوص تجري على هاتفك.</p>
+        <p class="lede lede-long">تكشف منارة النسخ المزيفة من الشبكات ونقاط الاتصال الخطرة قبل أن تنضم إليها، وتجري كل فحوصها على هاتفك.</p>
+        <a class="download" href="https://github.com/MohammedAbdullah26/manara-website/releases/latest/download/Manara.apk" type="application/vnd.android.package-archive">
+          <svg aria-hidden="true"><use href="#i-download" /></svg>تنزيل لأندرويد
+        </a>
+        <!-- UPDATE when a new APK is released: version and size (also in index.html). -->
+        <p class="meta">الإصدار <span class="num">1.0</span> · <span class="num">164</span> ميغابايت · أندرويد <span class="num">7.0</span> أو أحدث</p>
+        <p class="hint">تتصفح من حاسوب؟ افتح هذه الصفحة على هاتف أندرويد لتثبيت منارة.</p>
+      </div>
+    </div>
+
+    <section class="wrap" aria-labelledby="answers">
+      <h2 id="answers">أربع إجابات، بلا تخمين</h2>
+      <p class="intro">تحصل كل شبكة في النطاق على تقييم من 0 إلى 100 قبل أن تتصل بها، وعلى واحدة من أربع علامات، هي أشكال العوّامات التي يقرؤها البحّارة في البحر.</p>
+      <ul class="legend">
+        <li class="secure"><svg aria-hidden="true"><use href="#m-secure" /></svg><h3>آمنة <small class="num">من 75 إلى 100</small></h3><p>لا شيء مقلق فيما استطاعت منارة فحصه.</p></li>
+        <li class="moderate"><svg aria-hidden="true"><use href="#m-moderate" /></svg><h3>متوسطة <small class="num">من 40 إلى 74</small></h3><p>فيها ما يستدعي الحذر، مثل شبكة مفتوحة أو اسم مخفي.</p></li>
+        <li class="vulnerable"><svg aria-hidden="true"><use href="#m-vulnerable" /></svg><h3>خطرة <small class="num">أقل من 40</small></h3><p>قد تكون مزيفة أو غير آمنة. الأفضل ألّا تنضم إليها.</p></li>
+        <li class="unknown"><svg aria-hidden="true"><use href="#m-unknown" /></svg><h3>غير معروفة <small>لم يُفحص ما يكفي</small></h3><p>لم تستطع منارة فحص ما يكفي، لذا لن تصف الشبكة بأنها آمنة.</p></li>
+      </ul>
     </section>
 
-    <section class="wrap" aria-labelledby="good-to-know">
-      <h2 id="good-to-know">معلومات مهمة</h2>
-      <div class="notes">
-        <div class="note">
-          <h3>ليس من متجر Google Play</h3>
-          <p>هذه نسخة تجريبية من مشروع طلابي، نشاركها كملف APK، ولهذا يسألك أندرويد قبل تثبيتها.</p>
-        </div>
-        <div class="note">
-          <h3>ظهرت رسالة «لم يتم تثبيت التطبيق»؟</h3>
-          <p>على هاتفك نسخة أقدم من منارة بُنيت على حاسوب آخر. احذفها أولًا، ثم ثبّت هذه النسخة.</p>
-        </div>
-        <div class="note">
-          <h3>بياناتك تبقى على هاتفك</h3>
-          <p>يعمل الفحص والتقييم ونموذج الذكاء الاصطناعي على الهاتف. أما البلاغات عبر الإنترنت والنسخ الاحتياطي السحابي فمتوقفة حتى تسجّل الدخول وتفعّلها.</p>
-        </div>
-      </div>
+    <section class="wrap" aria-labelledby="catches">
+      <h2 id="catches">ما تكشفه منارة</h2>
+      <ul class="tower">
+        <li style="--i:1"><h3>النسخ المزيفة من الشبكات</h3><p>إذا ظهرت شبكة مفتوحة باسم شبكة محمية بكلمة مرور، تنبّه منارة إليها قبل أن ينضم إليها أحد، وتعلّم الشبكة الحقيقية أيضًا.</p></li>
+        <li style="--i:2"><h3>نسخ تستعير عنوان الراوتر</h3><p>إذا ظل اسم وعنوان واحد يبدّلان نوع الحماية أو النطاق، فهناك جهازان يستخدمانه. ومن أندرويد 11، تلاحظ منارة أيضًا تغيّر عتاد الراديو نفسه.</p></li>
+        <li style="--i:3"><h3>نقاط اتصال تتنكّر في اسم مؤسسة</h3><p>تكشف منارة نقطة الاتصال من هاتف حين تحمل اسمًا يشبه فندقًا أو مقهى أو مطارًا، من عنوانها ومن الشركة المصنّعة للهاتف.</p></li>
+        <li style="--i:4"><h3>فحص اتصالك على خمس مراحل</h3><p>بعد أن تتصل، تفحص منارة سلوك الشبكة الفعلي، ولا تصفها بأنها آمنة إلا إذا اكتمل ما يكفي من الفحوص.</p></li>
+        <li style="--i:5"><h3>اختبار لحركة البيانات بذكاء اصطناعي على الجهاز</h3><p>اختبار اختياري مدته 30 ثانية يراقب تدفق البيانات. يعمل نموذج الذكاء الاصطناعي على هاتفك، ولا يقرّر النتيجة وحده أبدًا.</p></li>
+        <li style="--i:6"><h3>رادار للوصول إلى الراوتر</h3><p>رادار على شاشتك يرشدك نحو نقطة الوصول.</p></li>
+        <li style="--i:7"><h3>تحذيرات من الهواتف القريبة</h3><p>عندما تفعّلها، تحذّر هواتف منارة بعضها من الشبكات التي يقل تقييمها عن 40.</p></li>
+      </ul>
+      <div class="tower-base" aria-hidden="true"></div>
     </section>
+
+    <section class="wrap" aria-labelledby="privacy">
+      <h2 id="privacy">هاتفك يقوم بالعمل</h2>
+      <ul class="facts">
+        <li>يعمل الفحص والتقييم وفحص المراحل الخمس ونموذج الذكاء الاصطناعي كلها على الهاتف.</li>
+        <li>يعدّ اختبار حركة البيانات الحزم ويبني إحصاءات عن تدفقها، ولا يخزّن محتواها أبدًا.</li>
+        <li>تبقى التحذيرات القريبة والبلاغات عبر الإنترنت والنسخ الاحتياطي السحابي متوقفة حتى تفعّلها. والبلاغات والنسخ الاحتياطي تتطلب حسابًا.</li>
+        <li>تُشفَّر الشبكات المحفوظة بمفتاح لا يغادر التخزين الآمن في هاتفك.</li>
+      </ul>
+    </section>
+
+    <section class="wrap" aria-labelledby="install">
+      <h2 id="install">التثبيت في خمس خطوات</h2>
+      <p class="intro">منارة ليست على متجر Google Play، ولهذا يسألك أندرويد قبل تثبيتها.</p>
+      <ol class="steps">
+        <li><p>اضغط <strong>تنزيل لأندرويد</strong> وانتظر حتى يكتمل تنزيل الملف.</p></li>
+        <li><p>افتح <strong><bdi>Manara.apk</bdi></strong> من إشعار التنزيل، أو من مجلد التنزيلات في تطبيق الملفات.</p></li>
+        <li><p>إذا أخبرك أندرويد أن المتصفح غير مسموح له بتثبيت التطبيقات، فاضغط <strong>الإعدادات</strong>، وفعّل <strong>السماح من هذا المصدر</strong>، ثم ارجع.</p></li>
+        <li><p>اضغط <strong>تثبيت</strong>. وإذا حذّرك Play Protect من تطبيق غير معروف، فاضغط <strong>مزيد من التفاصيل</strong>، ثم <strong>التثبيت على أي حال</strong>.</p></li>
+        <li><p>افتح منارة واختر الموقع <strong>الدقيق</strong>. لا يعطي أندرويد نتائج فحص الواي&nbsp;فاي إلا للتطبيقات التي لديها هذا الإذن.</p></li>
+      </ol>
+      <p class="note"><strong>ظهرت رسالة «لم يتم تثبيت التطبيق»؟</strong> على هاتفك نسخة أقدم من منارة بُنيت على حاسوب آخر. احذفها، ثم حاول مجددًا.</p>
+      <a class="download close" href="https://github.com/MohammedAbdullah26/manara-website/releases/latest/download/Manara.apk" type="application/vnd.android.package-archive">
+        <svg aria-hidden="true"><use href="#i-download" /></svg>تنزيل لأندرويد
+      </a>
+    </section>
+
+    <div class="wrap">
+      <details class="fog">
+        <summary>عن منارة<svg aria-hidden="true"><use href="#i-chevron" /></svg></summary>
+        <div class="body">
+          <p>منارة مشروع تخرج (<span class="num">2026</span>) لفريق <bdi>SDP-G25</bdi> في جامعة قطر، قسم علوم وهندسة الحاسب، كلية الهندسة.</p>
+          <p>المشرف: <bdi>Dr. Mucahid Kutlu</bdi></p>
+          <p>الفريق:</p>
+          <ul>
+            <li><bdi>Mohammed Abdullah</bdi></li>
+            <li><bdi>Elfadil Ahmed</bdi></li>
+            <li><bdi>Ahmed Laghdaf</bdi></li>
+            <li><bdi>Faisal Bu-Shawareb</bdi></li>
+          </ul>
+        </div>
+      </details>
+    </div>
   </main>
 
   <footer class="wrap">
-    منارة · طوّرها فريق <bdi>SDP-G25</bdi>
+    <span>منارة <span class="num">1.0</span> · <span lang="en">Manara</span></span>
+    <a href="https://github.com/MohammedAbdullah26/manara-website/releases">كل الإصدارات</a>
   </footer>
 
   <script>
-    // Show the "open this on your phone" hint everywhere except Android.
-    if (!/Android/i.test(navigator.userAgent)) document.body.classList.add("is-desktop");
+    if (!/Android/i.test(navigator.userAgent)) document.documentElement.classList.add("not-android");
+    // Remember the language the visitor picks.
+    document.querySelectorAll("[data-lang]").forEach(function (a) {
+      a.addEventListener("click", function () { try { localStorage.setItem("manara-lang", a.dataset.lang); } catch (e) {} });
+    });
   </script>
 </body>
 </html>

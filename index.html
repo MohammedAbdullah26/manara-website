@@ -1,101 +1,180 @@
 <!doctype html>
-<!--
-  Manara download page, in English. The Arabic page is ar.html; both use style.css.
-
-  When you publish a new APK (see README.md), update the version and the file size marked
-  "UPDATE" in BOTH pages. The download link follows the newest GitHub Release by itself.
--->
 <html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Manara – Download for Android</title>
-  <meta name="description" content="Manara is a Wi-Fi security scanner for Android that checks a network before you trust it. Download the APK." />
-  <meta name="theme-color" content="#0B1A2E" />
+  <title>Manara: check a Wi-Fi network before you trust it</title>
+  <meta name="description" content="Manara is a Wi-Fi security scanner for Android. It spots fake copies of networks and risky hotspots before you join, and does every check on your phone." />
+  <meta name="theme-color" content="#071222" />
   <link rel="icon" type="image/png" href="logo.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa&family=El+Messiri:wght@600&family=Fraunces:opsz,wght@9..144,500&display=swap" rel="stylesheet" />
+  <script>
+    // Open in the phone's language. A choice made with the language switch wins.
+    (function () {
+      var saved = null;
+      try { saved = localStorage.getItem("manara-lang"); } catch (e) {}
+      if (saved === "en") return;
+      var lang = (navigator.languages && navigator.languages[0]) || navigator.language || "";
+      if (saved === "ar" || /^ar(-|$)/i.test(lang)) location.replace("ar.html" + location.hash);
+    })();
+  </script>
+  <link rel="preload" href="fonts/fraunces-500.woff" as="font" type="font/woff" crossorigin />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="wrap">
-    <nav class="topbar" aria-label="Language">
-      <a class="lang-switch" href="ar.html" lang="ar" hreflang="ar">العربية</a>
-    </nav>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="boat" viewBox="0 0 44 40">
+        <path d="M21 5v25" stroke="currentColor" stroke-width="1.4" />
+        <path d="M22.4 7 22.4 29H38Z" fill="currentColor" />
+        <path d="M19.6 11 19.6 29H9Z" fill="currentColor" opacity=".78" />
+        <path d="M4 31h36l-5 7H9Z" fill="#1B2F4A" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" />
+      </symbol>
+      <symbol id="m-secure" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#0B1A2E" stroke="#24405F" /><circle cx="12" cy="12" r="4.6" fill="#5DCAA5" /></symbol>
+      <symbol id="m-moderate" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#0B1A2E" stroke="#24405F" /><path d="M12 6.6 17 16.2H7Z" fill="#EF9F27" /></symbol>
+      <symbol id="m-vulnerable" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#0B1A2E" stroke="#24405F" /><circle cx="12" cy="8.2" r="3.4" fill="#E24B4A" /><circle cx="12" cy="15.8" r="3.4" fill="#E24B4A" /></symbol>
+      <symbol id="m-unknown" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#0B1A2E" stroke="#24405F" /><circle cx="12" cy="12" r="4.4" fill="none" stroke="#B4B2A9" stroke-width="2" /></symbol>
+      <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3.5v11.5M6.5 10l5.5 5.5 5.5-5.5M5 20.5h14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" /></symbol>
+      <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></symbol>
+    </defs>
+  </svg>
 
-    <div class="hero">
-      <div>
-        <div class="brand">
-          <img src="logo.png" alt="" width="72" height="72" />
-          <h1>Manara <span class="alt-name" lang="ar">منارة</span></h1>
-        </div>
-        <p class="tagline">A Wi-Fi security scanner for Android that checks a network before you trust it.</p>
-        <p class="lede">
-          Manara flags fake copies and risky hotspots before you join them, checks the network
-          you're connected to, and helps you find a router with an on-screen radar. Everything runs
-          on your phone.
-        </p>
-
-        <!-- Always the newest GitHub Release's Manara.apk, so this link doesn't change between versions. -->
-        <a class="download" href="https://github.com/MohammedAbdullah26/manara-website/releases/latest/download/Manara.apk">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M12 3v12" /><path d="m7 10 5 5 5-5" /><path d="M5 21h14" />
-          </svg>
-          Download for Android
-        </a>
-        <!-- UPDATE: the version and the file size -->
-        <p class="meta">Version 1.0 · APK · 164 MB · Android 7.0 or later</p>
-        <p class="desktop-hint">On a computer? Open this page on your Android phone to install it.</p>
+  <header class="hero">
+    <a class="lang-switch" href="ar.html" lang="ar" hreflang="ar" data-lang="ar">العربية</a>
+    <figure class="scene">
+      <div class="art" aria-hidden="true">
+        <div class="sea"></div>
+        <svg class="lighthouse" viewBox="0 0 60 240">
+          <defs><radialGradient id="glow"><stop offset="0" stop-color="#FAC775" stop-opacity=".75" /><stop offset="1" stop-color="#FAC775" stop-opacity="0" /></radialGradient></defs>
+          <circle cx="30" cy="41" r="20" fill="url(#glow)" />
+          <path d="M18 30 30 17 42 30Z" fill="#A32D2D" /><circle cx="30" cy="15" r="2.2" fill="#A32D2D" />
+          <rect x="21" y="30" width="18" height="22" rx="2" fill="#0B1A2E" stroke="#F1EFE8" stroke-width="1.4" />
+          <circle cx="30" cy="41" r="5.5" fill="#EF9F27" />
+          <path d="M25.5 31v20M34.5 31v20" stroke="#F1EFE8" stroke-width=".8" opacity=".6" />
+          <path d="M13 52.5h34M15 52.5v4M21 52.5v4M27 52.5v4M33 52.5v4M39 52.5v4M45 52.5v4" stroke="#F1EFE8" stroke-width="1.4" />
+          <rect x="14" y="56" width="32" height="6" fill="#1B2F4A" />
+          <path d="M19 62h22l2 37H17Z" fill="#F1EFE8" />
+          <path d="M17 99h26l2 37H15Z" fill="#A32D2D" />
+          <path d="M15 136h30l2 37H13Z" fill="#F1EFE8" />
+          <path d="M13 173h34l2 37H11Z" fill="#A32D2D" />
+          <rect x="28.4" y="74" width="3.2" height="9" rx="1.6" fill="#0B1A2E" /><rect x="28.4" y="148" width="3.2" height="9" rx="1.6" fill="#0B1A2E" />
+          <rect x="26.5" y="196" width="7" height="14" rx="3.5" fill="#0B1A2E" />
+          <path d="M0 240v-27q8-9 18-5 10-8 22-2 10-5 20 4v30Z" fill="#1B2F4A" />
+        </svg>
+        <svg class="boat far b-far" viewBox="0 0 44 40"><use href="#boat" /></svg>
+        <svg class="boat mid b-library" viewBox="0 0 44 40"><use href="#boat" /></svg>
+        <svg class="boat b-home" viewBox="0 0 44 40"><use href="#boat" /><circle cx="21" cy="4.6" r="2.7" fill="#EF9F27" /></svg>
+        <svg class="boat mid b-cafe" viewBox="0 0 44 40"><use href="#boat" /></svg>
+        <svg class="boat b-copy" viewBox="0 0 44 40"><use href="#boat" /><path d="M21.6 4.2 31 6.8l-9.4 2.6Z" fill="#E24B4A" /></svg>
+        <svg class="buoy b-buoy" viewBox="0 0 16 40"><circle cx="8" cy="4" r="3.2" fill="#F7C1C1" /><circle cx="8" cy="11" r="3.2" fill="#F7C1C1" /><path d="M8 14v4" stroke="#F7C1C1" stroke-width="1.4" /><path d="M3 18h10l1.5 18h-13Z" fill="#E24B4A" /><path d="M2.4 25h11.2l.5 6H1.9Z" fill="#0B1A2E" /></svg>
+        <div class="beam"></div>
       </div>
-
-      <div class="shots">
-        <img src="screenshots/scan-limit.png" width="540" height="1200"
-             alt="Manara's Networks tab at night, showing the connected network and the area score" />
-        <img src="screenshots/settings-tab.png" width="540" height="1200"
-             alt="Manara's Settings tab by day, with Advanced Detection and the About card" />
-      </div>
-    </div>
+      <ul class="tags" aria-hidden="true">
+        <li class="tag t-library"><svg><use href="#m-moderate" /></svg><span><b>Library</b><span class="v-moderate">Moderate</span> · <span class="num">62</span></span></li>
+        <li class="tag t-home"><svg><use href="#m-secure" /></svg><span><b>Home · connected</b><span class="v-secure">Secure</span> · <span class="num">84</span></span></li>
+        <li class="tag t-cafe"><svg><use href="#m-unknown" /></svg><span><b>Café Guest</b>Unknown</span></li>
+        <li class="tag t-copy"><svg><use href="#m-vulnerable" /></svg><span><b>Corniche (open copy)</b><span class="v-vulnerable">Vulnerable</span> · may be fake</span></li>
+      </ul>
+      <figcaption>An example scan<span class="sr-only">: Manara's beam passes over networks drawn as boats. Home is Secure, the Library is Moderate, Café Guest is Unknown, and an open copy of Corniche is Vulnerable because it may be fake.</span></figcaption>
+    </figure>
   </header>
 
   <main>
-    <section class="wrap" aria-labelledby="install">
-      <h2 id="install">How to install</h2>
-      <ol class="steps">
-        <li>Tap <strong>Download for Android</strong> and wait for the file to finish downloading.</li>
-        <li>Open <strong>Manara.apk</strong> from the download notification, or from the Downloads folder in your Files app.</li>
-        <li>If Android says your browser can't install apps, tap <strong>Settings</strong>, turn on <strong>Allow from this source</strong>, then go back.</li>
-        <li>Tap <strong>Install</strong>. If Play Protect warns about an unknown app, tap <strong>More details</strong>, then <strong>Install anyway</strong>.</li>
-        <li>Open Manara and allow <strong>Precise</strong> location. Android only gives Wi-Fi scan results to apps that have it.</li>
-      </ol>
+    <div class="gallery wrap">
+      <div class="railing" aria-hidden="true"></div>
+      <div class="card">
+        <p class="lockup"><img src="logo.png" alt="" width="56" height="56" /><span lang="en">Manara</span><span lang="ar">منارة</span></p>
+        <h1>Check a Wi-Fi network before you trust it.</h1>
+        <p class="lede lede-short">Every check runs on your phone.</p>
+        <p class="lede lede-long">Manara spots fake copies of networks and risky hotspots before you join them, and does every check on your phone.</p>
+        <a class="download" href="https://github.com/MohammedAbdullah26/manara-website/releases/latest/download/Manara.apk" type="application/vnd.android.package-archive">
+          <svg aria-hidden="true"><use href="#i-download" /></svg>Download for Android
+        </a>
+        <!-- UPDATE when a new APK is released: version and size (also in ar.html). -->
+        <p class="meta">Version <span class="num">1.0</span> · <span class="num">164</span> MB · Android <span class="num">7.0</span> or later</p>
+        <p class="hint">On a computer? Open this page on your Android phone to install Manara.</p>
+      </div>
+    </div>
+
+    <section class="wrap" aria-labelledby="answers">
+      <h2 id="answers">Four answers, and never a guess</h2>
+      <p class="intro">Every network in range gets a score from 0 to 100 before you connect, and one of four marks: the buoy shapes sailors read at sea.</p>
+      <ul class="legend">
+        <li class="secure"><svg aria-hidden="true"><use href="#m-secure" /></svg><h3>Secure <small class="num">75 to 100</small></h3><p>Nothing worrying in what Manara could check.</p></li>
+        <li class="moderate"><svg aria-hidden="true"><use href="#m-moderate" /></svg><h3>Moderate <small class="num">40 to 74</small></h3><p>Something to be careful about, such as an open network or a hidden name.</p></li>
+        <li class="vulnerable"><svg aria-hidden="true"><use href="#m-vulnerable" /></svg><h3>Vulnerable <small class="num">below 40</small></h3><p>It may be fake or unsafe. Better not to join it.</p></li>
+        <li class="unknown"><svg aria-hidden="true"><use href="#m-unknown" /></svg><h3>Unknown <small>too little checked</small></h3><p>Manara couldn't check enough, so it won't call the network safe.</p></li>
+      </ul>
     </section>
 
-    <section class="wrap" aria-labelledby="good-to-know">
-      <h2 id="good-to-know">Good to know</h2>
-      <div class="notes">
-        <div class="note">
-          <h3>Not from the Play Store</h3>
-          <p>This is a test build of a student project, shared as an APK. That's why Android asks before installing it.</p>
-        </div>
-        <div class="note">
-          <h3>"App not installed"?</h3>
-          <p>An older copy of Manara built on another computer is in the way. Uninstall it, then install this one.</p>
-        </div>
-        <div class="note">
-          <h3>Your data stays on the phone</h3>
-          <p>Scans, scores and the AI model run on the phone. Online reports and cloud backup are off until you sign in and turn them on.</p>
-        </div>
-      </div>
+    <section class="wrap" aria-labelledby="catches">
+      <h2 id="catches">What Manara catches</h2>
+      <ul class="tower">
+        <li style="--i:1"><h3>Fake copies of a network</h3><p>An open network using the name of one that has a password is flagged before anyone joins it, and the real one is marked too.</p></li>
+        <li style="--i:2"><h3>Copies that borrow the router's address</h3><p>When one name and address keep switching security or band, two devices are sharing it. From Android 11, Manara also notices when the radio hardware itself changes.</p></li>
+        <li style="--i:3"><h3>Hotspots dressed as a business</h3><p>A phone hotspot named like a hotel, café or airport is spotted from its address and the phone maker behind it.</p></li>
+        <li style="--i:4"><h3>A five-stage check of your connection</h3><p>Once you're connected, Manara checks how the network really behaves, and only calls it Secure when enough of the checks finished.</p></li>
+        <li style="--i:5"><h3>A traffic test with on-device AI</h3><p>An optional 30-second test watches how the traffic flows. The AI model runs on your phone, and it never decides a verdict on its own.</p></li>
+        <li style="--i:6"><h3>A radar to find the router</h3><p>Locate turns your screen into a radar that guides you toward the access point.</p></li>
+        <li style="--i:7"><h3>Warnings from phones nearby</h3><p>When you turn it on, Manara phones warn each other about networks that score below 40.</p></li>
+      </ul>
+      <div class="tower-base" aria-hidden="true"></div>
     </section>
+
+    <section class="wrap" aria-labelledby="privacy">
+      <h2 id="privacy">Your phone does the work</h2>
+      <ul class="facts">
+        <li>Scanning, scoring, the five-stage check and the AI model all run on the phone.</li>
+        <li>The traffic test counts packets and builds statistics about the traffic. It never stores what's inside the packets.</li>
+        <li>Nearby warnings, online reports and cloud backup stay off until you turn them on. Reports and backup need an account.</li>
+        <li>Saved networks are encrypted with a key that never leaves your phone's secure storage.</li>
+      </ul>
+    </section>
+
+    <section class="wrap" aria-labelledby="install">
+      <h2 id="install">Install in five steps</h2>
+      <p class="intro">Manara isn't on the Play Store, so Android asks before installing it.</p>
+      <ol class="steps">
+        <li><p>Tap <strong>Download for Android</strong> and wait for the file to finish downloading.</p></li>
+        <li><p>Open <strong>Manara.apk</strong> from the download notification, or from Downloads in your Files app.</p></li>
+        <li><p>If Android says your browser can't install apps, tap <strong>Settings</strong>, turn on <strong>Allow from this source</strong>, and go back.</p></li>
+        <li><p>Tap <strong>Install</strong>. If Play Protect warns about an unknown app, tap <strong>More details</strong>, then <strong>Install anyway</strong>.</p></li>
+        <li><p>Open Manara and choose <strong>Precise</strong> location. Android only gives Wi-Fi scan results to apps that have it.</p></li>
+      </ol>
+      <p class="note"><strong>"App not installed"?</strong> An older copy of Manara built on another computer is in the way. Uninstall it, then try again.</p>
+      <a class="download close" href="https://github.com/MohammedAbdullah26/manara-website/releases/latest/download/Manara.apk" type="application/vnd.android.package-archive">
+        <svg aria-hidden="true"><use href="#i-download" /></svg>Download for Android
+      </a>
+    </section>
+
+    <div class="wrap">
+      <details class="fog">
+        <summary>About Manara<svg aria-hidden="true"><use href="#i-chevron" /></svg></summary>
+        <div class="body">
+          <p>Manara is a Senior Design Project (<span class="num">2026</span>) by team SDP-G25 at Qatar University, Department of Computer Science and Engineering, College of Engineering.</p>
+          <p>Supervisor: Dr. Mucahid Kutlu</p>
+          <p>Team:</p>
+          <ul>
+            <li>Mohammed Abdullah</li>
+            <li>Elfadil Ahmed</li>
+            <li>Ahmed Laghdaf</li>
+            <li>Faisal Bu-Shawareb</li>
+          </ul>
+        </div>
+      </details>
+    </div>
   </main>
 
   <footer class="wrap">
-    Manara · Built by SDP-G25
+    <span>Manara <span class="num">1.0</span> · <span lang="ar">منارة</span></span>
+    <a href="https://github.com/MohammedAbdullah26/manara-website/releases">All releases</a>
   </footer>
 
   <script>
-    // Show the "open this on your phone" hint everywhere except Android.
-    if (!/Android/i.test(navigator.userAgent)) document.body.classList.add("is-desktop");
+    if (!/Android/i.test(navigator.userAgent)) document.documentElement.classList.add("not-android");
+    // Remember the language the visitor picks.
+    document.querySelectorAll("[data-lang]").forEach(function (a) {
+      a.addEventListener("click", function () { try { localStorage.setItem("manara-lang", a.dataset.lang); } catch (e) {} });
+    });
   </script>
 </body>
 </html>

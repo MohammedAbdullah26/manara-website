@@ -1,0 +1,696 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-26T18:49:30Z",
+  "title": "Design System: Manara",
+  "extensions": {
+    "colorMeta": {
+      "amber": {
+        "role": "primary",
+        "displayName": "Lantern Amber",
+        "canonical": "#EF9F27",
+        "oklch": "oklch(76.4% 0.154 70.8)",
+        "tonalRamp": [
+          "#140800",
+          "#362001",
+          "#5D3900",
+          "#865500",
+          "#B27203",
+          "#E09213",
+          "#F5BD7A",
+          "#FEEBD6"
+        ]
+      },
+      "gold": {
+        "role": "primary",
+        "displayName": "Beam Gold",
+        "canonical": "#FAC775",
+        "oklch": "oklch(85.8% 0.116 78.1)",
+        "tonalRamp": [
+          "#120901",
+          "#342100",
+          "#583C02",
+          "#805903",
+          "#A8781F",
+          "#CC9C4B",
+          "#E6C38E",
+          "#F9EDDA"
+        ]
+      },
+      "dark-amber": {
+        "role": "primary",
+        "displayName": "Daymark Amber",
+        "canonical": "#854F0B",
+        "oklch": "oklch(48.0% 0.104 64.4)",
+        "tonalRamp": [
+          "#120902",
+          "#381E00",
+          "#603702",
+          "#895311",
+          "#AD7439",
+          "#D2975E",
+          "#EAC099",
+          "#FBEBDE"
+        ]
+      },
+      "amber-ink": {
+        "role": "primary",
+        "displayName": "Amber Ink",
+        "canonical": "#412402",
+        "oklch": "oklch(29.2% 0.063 64.8)",
+        "tonalRamp": [
+          "#100A05",
+          "#34200C",
+          "#593B1B",
+          "#7A5A3A",
+          "#9D7B5A",
+          "#C19D7C",
+          "#DEC4AC",
+          "#F6EDE4"
+        ]
+      },
+      "sky-blue": {
+        "role": "secondary",
+        "displayName": "Signal Sky Blue",
+        "canonical": "#85B7EB",
+        "oklch": "oklch(76.4% 0.092 250.1)",
+        "tonalRamp": [
+          "#050C14",
+          "#082642",
+          "#144470",
+          "#356493",
+          "#5686B8",
+          "#79AADC",
+          "#ABCDF1",
+          "#E4F0FD"
+        ]
+      },
+      "deep-blue": {
+        "role": "secondary",
+        "displayName": "Daymark Blue",
+        "canonical": "#185FA5",
+        "oklch": "oklch(48.1% 0.131 252.5)",
+        "tonalRamp": [
+          "#030C18",
+          "#00254A",
+          "#00427C",
+          "#1C62A9",
+          "#4285CE",
+          "#66A9F3",
+          "#A3CDFE",
+          "#E4F0FE"
+        ]
+      },
+      "cream": {
+        "role": "tertiary",
+        "displayName": "Tower Cream",
+        "canonical": "#F1EFE8",
+        "oklch": "oklch(95.2% 0.010 93.6)",
+        "tonalRamp": [
+          "#0B0B0A",
+          "#262521",
+          "#44423C",
+          "#63615B",
+          "#84827C",
+          "#A7A59F",
+          "#CAC9C4",
+          "#EFEEED"
+        ]
+      },
+      "brick": {
+        "role": "tertiary",
+        "displayName": "Tower Brick",
+        "canonical": "#A32D2D",
+        "oklch": "oklch(48.0% 0.154 25.1)",
+        "tonalRamp": [
+          "#180504",
+          "#4C0106",
+          "#800211",
+          "#A73130",
+          "#CF5651",
+          "#F57B73",
+          "#FFB3AC",
+          "#FEE9E7"
+        ]
+      },
+      "navy": {
+        "role": "neutral",
+        "displayName": "Night Navy",
+        "canonical": "#0B1A2E",
+        "oklch": "oklch(21.6% 0.045 256.2)",
+        "tonalRamp": [
+          "#080B10",
+          "#1B2634",
+          "#334359",
+          "#51637B",
+          "#71849D",
+          "#93A7C1",
+          "#BDCADD",
+          "#EAEFF6"
+        ]
+      },
+      "navy-deep": {
+        "role": "neutral",
+        "displayName": "Deep Night",
+        "canonical": "#071222",
+        "oklch": "oklch(18.1% 0.037 257.2)",
+        "tonalRamp": [
+          "#090B0F",
+          "#1D2631",
+          "#364355",
+          "#546277",
+          "#758499",
+          "#97A6BC",
+          "#BFCADA",
+          "#EBEFF5"
+        ]
+      },
+      "sea": {
+        "role": "neutral",
+        "displayName": "Night Sea",
+        "canonical": "#0E2742",
+        "oklch": "oklch(26.9% 0.059 252.4)",
+        "tonalRamp": [
+          "#070C11",
+          "#162638",
+          "#2A4460",
+          "#496382",
+          "#6985A5",
+          "#8BA8C9",
+          "#B7CBE4",
+          "#E8EFF8"
+        ]
+      },
+      "navy-raised": {
+        "role": "neutral",
+        "displayName": "Raised Navy",
+        "canonical": "#1B2F4A",
+        "oklch": "oklch(30.2% 0.056 256.3)",
+        "tonalRamp": [
+          "#080B11",
+          "#192637",
+          "#2E435F",
+          "#4C6381",
+          "#6D84A4",
+          "#8FA7C8",
+          "#B9CBE2",
+          "#E9EFF8"
+        ]
+      },
+      "ghost-band": {
+        "role": "neutral",
+        "displayName": "Night Fog",
+        "canonical": "#13263F",
+        "oklch": "oklch(26.6% 0.053 255.9)",
+        "tonalRamp": [
+          "#080B11",
+          "#192637",
+          "#2F435E",
+          "#4D637F",
+          "#6D84A2",
+          "#90A7C6",
+          "#BACBE1",
+          "#E9EFF7"
+        ]
+      },
+      "porthole-rim": {
+        "role": "neutral",
+        "displayName": "Porthole Rim",
+        "canonical": "#24405F",
+        "oklch": "oklch(36.5% 0.064 252.2)",
+        "tonalRamp": [
+          "#070C12",
+          "#15263A",
+          "#284462",
+          "#466485",
+          "#6785A8",
+          "#89A8CC",
+          "#B5CCE6",
+          "#E7EFF9"
+        ]
+      },
+      "warm-white": {
+        "role": "neutral",
+        "displayName": "Lamplit White",
+        "canonical": "#FAEEDA",
+        "oklch": "oklch(95.3% 0.029 80.7)",
+        "tonalRamp": [
+          "#0D0B08",
+          "#2A241A",
+          "#4A4131",
+          "#6A604F",
+          "#8C816F",
+          "#AFA491",
+          "#D0C8BB",
+          "#F1EEE9"
+        ]
+      },
+      "day-sky": {
+        "role": "neutral",
+        "displayName": "Day Sky",
+        "canonical": "#E6F1FB",
+        "oklch": "oklch(95.3% 0.018 245.4)",
+        "tonalRamp": [
+          "#0A0B0D",
+          "#20262B",
+          "#3A434B",
+          "#59636B",
+          "#7A848D",
+          "#9CA6B0",
+          "#C3CAD1",
+          "#ECEFF1"
+        ]
+      },
+      "day-sea": {
+        "role": "neutral",
+        "displayName": "Day Sea",
+        "canonical": "#D6E7F7",
+        "oklch": "oklch(92.0% 0.028 246.5)",
+        "tonalRamp": [
+          "#090B0E",
+          "#1D262E",
+          "#364450",
+          "#546371",
+          "#758493",
+          "#97A7B6",
+          "#BFCBD5",
+          "#EBEFF3"
+        ]
+      },
+      "day-hair": {
+        "role": "neutral",
+        "displayName": "Haze Line",
+        "canonical": "#B9D3EE",
+        "oklch": "oklch(85.6% 0.047 249.4)",
+        "tonalRamp": [
+          "#080C10",
+          "#192634",
+          "#2F445A",
+          "#4D647B",
+          "#6D859E",
+          "#8FA8C1",
+          "#BACBDE",
+          "#E9EFF6"
+        ]
+      },
+      "white": {
+        "role": "neutral",
+        "displayName": "Gallery White",
+        "canonical": "#FFFFFF",
+        "oklch": "oklch(100.0% 0.000 89.9)",
+        "tonalRamp": [
+          "#0B0B0B",
+          "#252525",
+          "#424242",
+          "#616161",
+          "#828282",
+          "#A5A5A5",
+          "#C9C9C9",
+          "#EEEEEE"
+        ]
+      },
+      "mark-secure": {
+        "role": "verdict",
+        "displayName": "Safe Water Green",
+        "canonical": "#5DCAA5",
+        "oklch": "oklch(76.5% 0.115 168.3)",
+        "tonalRamp": [
+          "#010F09",
+          "#002D20",
+          "#034E3A",
+          "#027357",
+          "#1E9875",
+          "#50BC98",
+          "#95DAC0",
+          "#DEF5EB"
+        ]
+      },
+      "pennant": {
+        "role": "verdict",
+        "displayName": "Pennant Red",
+        "canonical": "#E24B4A",
+        "oklch": "oklch(62.3% 0.188 24.7)",
+        "tonalRamp": [
+          "#1A0303",
+          "#4D0006",
+          "#800112",
+          "#B41723",
+          "#DC4545",
+          "#FF726D",
+          "#FEB3AC",
+          "#FEE9E7"
+        ]
+      },
+      "mark-unknown": {
+        "role": "verdict",
+        "displayName": "Unlit Grey",
+        "canonical": "#B4B2A9",
+        "oklch": "oklch(76.3% 0.013 96.5)",
+        "tonalRamp": [
+          "#0B0B0A",
+          "#262520",
+          "#44423B",
+          "#636159",
+          "#84827A",
+          "#A7A59C",
+          "#CBC9C3",
+          "#EFEEEC"
+        ]
+      },
+      "pale-red": {
+        "role": "verdict",
+        "displayName": "Buoy Pale Red",
+        "canonical": "#F7C1C1",
+        "oklch": "oklch(85.9% 0.062 18.4)",
+        "tonalRamp": [
+          "#110909",
+          "#371C1D",
+          "#5E3435",
+          "#815354",
+          "#A47374",
+          "#C99696",
+          "#E4BFBE",
+          "#F8EBEB"
+        ]
+      },
+      "verdict-secure-day": {
+        "role": "verdict",
+        "displayName": "Deep Safe Water",
+        "canonical": "#0F6E56",
+        "oklch": "oklch(48.1% 0.091 170.1)",
+        "tonalRamp": [
+          "#030E0A",
+          "#002D21",
+          "#044E3C",
+          "#167259",
+          "#41947A",
+          "#67B79D",
+          "#A1D7C3",
+          "#E1F4EC"
+        ]
+      },
+      "verdict-vulnerable-night": {
+        "role": "verdict",
+        "displayName": "Night Pennant",
+        "canonical": "#F09595",
+        "oklch": "oklch(76.3% 0.110 19.9)",
+        "tonalRamp": [
+          "#150707",
+          "#431215",
+          "#702429",
+          "#964447",
+          "#BB6567",
+          "#E18989",
+          "#F7B6B5",
+          "#FFE8E8"
+        ]
+      },
+      "stone": {
+        "role": "verdict",
+        "displayName": "Stone",
+        "canonical": "#5F5E5A",
+        "oklch": "oklch(48.2% 0.006 95.2)",
+        "tonalRamp": [
+          "#0B0B0A",
+          "#262523",
+          "#43423E",
+          "#62615D",
+          "#83827E",
+          "#A6A5A1",
+          "#CAC9C6",
+          "#EFEEED"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "The one headline in the gallery card."
+      },
+      "display-arabic": {
+        "displayName": "Display (Arabic)",
+        "purpose": "The gallery card headline on the Arabic page."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section titles."
+      },
+      "headline-arabic": {
+        "displayName": "Headline (Arabic)",
+        "purpose": "Section titles on the Arabic page."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Verdict words in the legend, in their verdict colours."
+      },
+      "title-band": {
+        "displayName": "Band Title",
+        "purpose": "Titles inside the tower bands."
+      },
+      "wordmark": {
+        "displayName": "Wordmark",
+        "purpose": "\"Manara\" in the lockup; 30px at 760px and above."
+      },
+      "wordmark-arabic": {
+        "displayName": "Arabic Wordmark",
+        "purpose": "منارة in the lockup only, in accent; 32px when it leads on the Arabic page."
+      },
+      "lede": {
+        "displayName": "Lede",
+        "purpose": "The gallery card's lede in secondary text; 17.5px at 760px and above."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "All running text on the English page."
+      },
+      "body-arabic": {
+        "displayName": "Body (Arabic)",
+        "purpose": "All running text on the Arabic page."
+      },
+      "button": {
+        "displayName": "Button",
+        "purpose": "The download label."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Version and size, score ranges, the install hint and the footer, in tabular figures."
+      },
+      "caption": {
+        "displayName": "Caption",
+        "purpose": "The scene's labels and caption; 13.5px at 760px and above."
+      }
+    },
+    "shadows": [
+      {
+        "name": "hanging-card",
+        "value": "0 18px 36px -18px rgba(7, 18, 34, 0.45)",
+        "purpose": "The gallery card, as it hangs from the railing."
+      },
+      {
+        "name": "hanging-button",
+        "value": "0 8px 18px -8px rgba(7, 18, 34, 0.55)",
+        "purpose": "The download pill."
+      },
+      {
+        "name": "tower-edge-day",
+        "value": "drop-shadow(0 0 0.75px rgba(11, 26, 46, 0.6)) drop-shadow(0 10px 14px rgba(11, 26, 46, 0.12))",
+        "purpose": "A filter on the tower in light mode only, to outline the cream bands against the pale sky (the bands' clip path drops borders)."
+      },
+      {
+        "name": "horizon",
+        "value": "0 -1px 0 rgba(133, 183, 235, 0.28)",
+        "purpose": "The line where the scene's sea meets its sky."
+      },
+      {
+        "name": "label-lift",
+        "value": "0 1px 3px #071222",
+        "purpose": "A text shadow that holds the scene's labels clear of the beam."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Every state transition: the download pill's lift and press, and the About chevron."
+      },
+      {
+        "name": "duration-press",
+        "value": "0.25s",
+        "purpose": "The download pill's transform and brightness."
+      },
+      {
+        "name": "duration-reveal",
+        "value": "0.3s",
+        "purpose": "The About chevron turning 180 degrees when the band opens."
+      },
+      {
+        "name": "beam-sweep",
+        "value": "9s linear infinite",
+        "purpose": "The beam's one sweep from just above the horizon to the nearest boat: fades in by 7%, reaches its last angle at 68%, fades out by 76% and rests dark to 100%. Only with prefers-reduced-motion: no-preference."
+      },
+      {
+        "name": "beam-rest",
+        "value": "rotate 48deg (phones), 20deg (760px and above)",
+        "purpose": "Under reduced motion the beam stands still on the open copy, and transitions are removed."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "wide",
+        "value": "760px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Download Button",
+      "kind": "button",
+      "refersTo": "download-button",
+      "description": "The one filled action: Lantern Amber by day, Beam Gold by night, with an Amber Ink label and the hanging button shadow.",
+      "html": "<a class=\"ds-download\" href=\"#\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M12 3.5v11.5M6.5 10l5.5 5.5 5.5-5.5M5 20.5h14\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>Download for Android</a>",
+      "css": ".ds-download { display: inline-flex; align-items: center; justify-content: center; gap: 12px; min-height: 56px; min-width: 320px; padding: 14px 28px; border-radius: 999px; background: var(--button, #EF9F27); color: var(--on-button, #412402); font-family: var(--body, system-ui, -apple-system, \"Segoe UI\", Roboto, sans-serif); font-size: 18px; font-weight: 700; text-decoration: none; box-shadow: 0 8px 18px -8px rgba(7, 18, 34, 0.55); transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), filter 0.25s; } .ds-download svg { width: 22px; height: 22px; flex: none; } .ds-download:hover { color: var(--on-button, #412402); filter: brightness(1.06); transform: translateY(-1px); } .ds-download:active { transform: translateY(1px); } .ds-download:focus-visible { outline: 3px solid var(--accent, #854F0B); outline-offset: 3px; border-radius: 6px; } @media (prefers-reduced-motion: reduce) { .ds-download { transition: none; } }"
+    },
+    {
+      "name": "Language Switch",
+      "kind": "nav",
+      "refersTo": "language-switch",
+      "description": "The ghost pill in the lantern room's top inline-end corner, labelled in the target language's own face.",
+      "html": "<div class=\"ds-scene-corner\"><a class=\"ds-lang\" href=\"#\" lang=\"ar\">العربية</a></div>",
+      "css": ".ds-scene-corner { display: flex; justify-content: flex-end; padding: 16px; background: var(--navy-deep, #071222); } .ds-lang { padding: 5px 15px; border: 1px solid #24405F; border-radius: 999px; background: rgba(11, 26, 46, 0.8); color: var(--sky-blue, #85B7EB); font-family: \"El Messiri\", Tahoma, sans-serif; font-size: 15px; font-weight: 600; line-height: 1.6; text-decoration: none; } .ds-lang:hover { color: var(--warm, #FAEEDA); border-color: var(--sky-blue, #85B7EB); } .ds-lang:focus-visible { outline: 3px solid var(--gold, #FAC775); outline-offset: 3px; border-radius: 6px; }"
+    },
+    {
+      "name": "Gallery Card",
+      "kind": "card",
+      "refersTo": "gallery-card",
+      "description": "The railing and the card that hangs from it: square top, 18px bottom corners, the lockup wordmarks, the display headline, the lede and the meta line.",
+      "html": "<div class=\"ds-gallery\"><div class=\"ds-railing\"></div><div class=\"ds-card\"><p class=\"ds-lockup\"><span lang=\"en\">Manara</span><span lang=\"ar\">منارة</span></p><h1 class=\"ds-display\">Check a Wi-Fi network before you trust it.</h1><p class=\"ds-lede\">Every check runs on your phone.</p><p class=\"ds-meta\">Version 1.0 · 164 MB · Android 7.0 or later</p></div></div>",
+      "css": ".ds-gallery { max-width: 680px; } .ds-railing { height: 14px; border-block: 2px solid var(--rail, #0B1A2E); background: repeating-linear-gradient(90deg, transparent 0 13px, var(--rail, #0B1A2E) 13px 15px); } .ds-card { background: var(--panel, #FFFFFF); color: var(--text, #0B1A2E); border-radius: 0 0 18px 18px; padding: 26px 40px 34px; box-shadow: 0 18px 36px -18px rgba(7, 18, 34, 0.45); font-family: var(--body, system-ui, -apple-system, \"Segoe UI\", Roboto, sans-serif); } .ds-lockup { display: flex; align-items: center; gap: 12px; margin: 0 0 14px; } .ds-lockup span[lang=en] { font-family: \"Fraunces\", Georgia, serif; font-weight: 500; font-size: 30px; line-height: 1; } .ds-lockup span[lang=ar] { font-family: \"Aref Ruqaa\", serif; font-size: 24px; line-height: 1; color: var(--accent, #854F0B); } .ds-display { margin: 0; font-family: var(--title, \"Fraunces\", Georgia, serif); font-weight: 500; font-size: clamp(26px, 7vw, 40px); line-height: 1.12; letter-spacing: -0.01em; text-wrap: balance; } .ds-lede { margin: 10px 0 0; color: var(--text-2, #185FA5); font-size: 17.5px; line-height: 1.5; max-width: 34em; } .ds-meta { margin: 12px 0 0; color: var(--text-2, #185FA5); font-size: 14px; font-variant-numeric: tabular-nums; }"
+    },
+    {
+      "name": "Verdict Legend",
+      "kind": "custom",
+      "refersTo": "verdict-porthole",
+      "description": "The buoyage key: a ruled list where each verdict has its topmark in a navy porthole, its word in its verdict colour, and its score range.",
+      "html": "<ul class=\"ds-legend\"><li class=\"ds-secure\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#0B1A2E\" stroke=\"#24405F\"/><circle cx=\"12\" cy=\"12\" r=\"4.6\" fill=\"#5DCAA5\"/></svg><h3>Secure <small>75 to 100</small></h3><p>Nothing worrying in what Manara could check.</p></li><li class=\"ds-moderate\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#0B1A2E\" stroke=\"#24405F\"/><path d=\"M12 6.6 17 16.2H7Z\" fill=\"#EF9F27\"/></svg><h3>Moderate <small>40 to 74</small></h3><p>Something to be careful about.</p></li><li class=\"ds-vulnerable\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#0B1A2E\" stroke=\"#24405F\"/><circle cx=\"12\" cy=\"8.2\" r=\"3.4\" fill=\"#E24B4A\"/><circle cx=\"12\" cy=\"15.8\" r=\"3.4\" fill=\"#E24B4A\"/></svg><h3>Vulnerable <small>below 40</small></h3><p>It may be fake or unsafe.</p></li><li class=\"ds-unknown\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#0B1A2E\" stroke=\"#24405F\"/><circle cx=\"12\" cy=\"12\" r=\"4.4\" fill=\"none\" stroke=\"#B4B2A9\" stroke-width=\"2\"/></svg><h3>Unknown <small>too little checked</small></h3><p>Manara will not call it safe.</p></li></ul>",
+      "css": ".ds-legend { list-style: none; margin: 0; padding: 0; border-top: 2px solid var(--rail, #0B1A2E); color: var(--text, #0B1A2E); font-family: var(--body, system-ui, -apple-system, \"Segoe UI\", Roboto, sans-serif); line-height: 1.6; } .ds-legend li { display: grid; grid-template-columns: 48px 1fr; gap: 2px 16px; padding: 16px 0 18px; border-bottom: 1px solid var(--hair, #B9D3EE); } .ds-legend svg { grid-row: span 2; width: 44px; height: 44px; } .ds-legend h3 { margin: 0; font-family: var(--title, \"Fraunces\", Georgia, serif); font-weight: 500; font-size: 22px; line-height: 1.2; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; } .ds-legend small { font-family: var(--body, system-ui, -apple-system, \"Segoe UI\", Roboto, sans-serif); font-size: 14px; font-weight: 400; color: var(--text-2, #185FA5); font-variant-numeric: tabular-nums; } .ds-legend p { margin: 0; } .ds-secure h3 { color: var(--v-secure, #0F6E56); } .ds-moderate h3 { color: var(--v-moderate, #854F0B); } .ds-vulnerable h3 { color: var(--v-vulnerable, #A32D2D); } .ds-unknown h3 { color: var(--v-unknown, #5F5E5A); }"
+    },
+    {
+      "name": "Tower Bands",
+      "kind": "custom",
+      "refersTo": "tower-band-cream",
+      "description": "The painted tower: flush cream and brick trapezoid bands that alternate by position and widen toward a Raised Navy base.",
+      "html": "<div class=\"ds-tower-wrap\"><ul class=\"ds-tower\"><li style=\"--i:5\"><h3>Fake copies of a network</h3><p>An open copy of a protected network is flagged before anyone joins it.</p></li><li style=\"--i:6\"><h3>A radar to find the router</h3><p>Locate guides you toward the access point.</p></li><li style=\"--i:7\"><h3>Warnings from phones nearby</h3><p>Manara phones warn each other about networks that score below 40.</p></li></ul><div class=\"ds-tower-base\"></div></div>",
+      "css": ".ds-tower-wrap { max-width: 680px; } .ds-tower { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; font-family: var(--body, system-ui, -apple-system, \"Segoe UI\", Roboto, sans-serif); line-height: 1.6; filter: drop-shadow(0 0 0.75px rgba(11, 26, 46, 0.6)) drop-shadow(0 10px 14px rgba(11, 26, 46, 0.12)); } .ds-tower li { margin-inline: calc((7 - var(--i)) * 2.2%); padding: 20px calc(22px + 3%) 22px; background: var(--cream, #F1EFE8); color: var(--navy, #0B1A2E); clip-path: polygon(2.2% 0, 97.8% 0, 100% 100%, 0 100%); } .ds-tower li:first-child { border-radius: 4px 4px 0 0; } .ds-tower li:nth-child(even) { background: var(--brick, #A32D2D); color: var(--warm, #FAEEDA); } .ds-tower h3 { margin: 0; font-family: \"Fraunces\", Georgia, serif; font-weight: 500; font-size: 20px; line-height: 1.25; } .ds-tower p { margin: 6px 0 0; font-size: 15.5px; } .ds-tower li:nth-child(odd) p { color: #24405F; } .ds-tower-base { height: 16px; background: var(--navy-raised, #1B2F4A); border-radius: 0 0 6px 6px; }"
+    },
+    {
+      "name": "Privacy Facts",
+      "kind": "custom",
+      "refersTo": "verdict-porthole",
+      "description": "A ruled list whose rows are marked by a small navy porthole holding the lantern's amber light.",
+      "html": "<ul class=\"ds-facts\"><li>Scanning, scoring, the five-stage check and the AI model all run on the phone.</li><li>Saved networks are encrypted with a key that never leaves your phone's secure storage.</li></ul>",
+      "css": ".ds-facts { list-style: none; margin: 0; padding: 0; border-top: 2px solid var(--rail, #0B1A2E); color: var(--text, #0B1A2E); font-family: var(--body, system-ui, -apple-system, \"Segoe UI\", Roboto, sans-serif); font-size: 16px; line-height: 1.6; max-width: 64ch; } .ds-facts li { position: relative; padding: 16px 0; padding-inline-start: 34px; border-bottom: 1px solid var(--hair, #B9D3EE); } .ds-facts li::before { content: \"\"; position: absolute; inset-inline-start: 0; top: 18px; width: 21px; height: 21px; border-radius: 50%; border: 1px solid #24405F; background: radial-gradient(circle, var(--amber, #EF9F27) 0 3.8px, var(--navy, #0B1A2E) 4.4px); }"
+    },
+    {
+      "name": "Install Steps",
+      "kind": "custom",
+      "refersTo": "step-marker",
+      "description": "A course of waypoints: navy discs with gold tabular numerals and a Rail ring, joined by a hairline course.",
+      "html": "<ol class=\"ds-steps\"><li><p>Tap <strong>Download for Android</strong> and wait for the file to finish downloading.</p></li><li><p>Open <strong>Manara.apk</strong> from the download notification.</p></li><li><p>Tap <strong>Install</strong>.</p></li></ol>",
+      "css": ".ds-steps { list-style: none; margin: 0; padding: 0; counter-reset: ds-step; color: var(--text, #0B1A2E); font-family: var(--body, system-ui, -apple-system, \"Segoe UI\", Roboto, sans-serif); font-size: 16px; line-height: 1.6; max-width: 64ch; } .ds-steps li { counter-increment: ds-step; position: relative; padding-inline-start: 56px; padding-bottom: 22px; } .ds-steps li::before { content: counter(ds-step); position: absolute; inset-inline-start: 0; top: 0; width: 36px; height: 36px; display: grid; place-items: center; border-radius: 50%; background: var(--navy, #0B1A2E); color: var(--gold, #FAC775); border: 2px solid var(--rail, #0B1A2E); font-weight: 700; font-variant-numeric: tabular-nums; box-sizing: border-box; } .ds-steps li:not(:last-child)::after { content: \"\"; position: absolute; inset-inline-start: 17px; top: 40px; bottom: 4px; width: 2px; background: var(--hair, #B9D3EE); } .ds-steps p { margin: 0; padding-top: 5px; }"
+    },
+    {
+      "name": "Note",
+      "kind": "card",
+      "refersTo": "note",
+      "description": "A soft band for a single caution in the install help, its lead-in in accent.",
+      "html": "<p class=\"ds-note\"><strong>\"App not installed\"?</strong> An older copy of Manara built on another computer is in the way. Uninstall it, then try again.</p>",
+      "css": ".ds-note { margin: 0; max-width: 64ch; padding: 16px 18px; background: var(--band, #D6E7F7); color: var(--text, #0B1A2E); border-radius: 14px; font-family: var(--body, system-ui, -apple-system, \"Segoe UI\", Roboto, sans-serif); font-size: 16px; line-height: 1.6; } .ds-note strong { color: var(--accent, #854F0B); }"
+    },
+    {
+      "name": "Fog Band",
+      "kind": "custom",
+      "refersTo": "fog-band",
+      "description": "The About band at the foot of the tower: closed by default, opened on tap, with a chevron that turns as it opens.",
+      "html": "<details class=\"ds-fog\"><summary>About Manara<svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></summary><div class=\"ds-fog-body\"><p>Manara is a Senior Design Project (2026) by team SDP-G25 at Qatar University.</p></div></details>",
+      "css": ".ds-fog { max-width: 680px; background: var(--fog, #D6E7F7); color: var(--text, #0B1A2E); border-radius: 16px; font-family: var(--body, system-ui, -apple-system, \"Segoe UI\", Roboto, sans-serif); font-size: 16px; line-height: 1.6; } .ds-fog summary { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 18px 20px; cursor: pointer; list-style: none; color: var(--text-2, #185FA5); font-weight: 600; border-radius: 16px; } .ds-fog summary::-webkit-details-marker { display: none; } .ds-fog summary svg { width: 20px; height: 20px; transition: rotate 0.3s cubic-bezier(0.16, 1, 0.3, 1); } .ds-fog[open] summary svg { rotate: 180deg; } .ds-fog summary:hover { color: var(--text, #0B1A2E); } .ds-fog summary:focus-visible { outline: 3px solid var(--accent, #854F0B); outline-offset: 3px; border-radius: 6px; } .ds-fog-body { padding: 0 20px 22px; } .ds-fog-body p { margin: 0; } @media (prefers-reduced-motion: reduce) { .ds-fog summary svg { transition: none; } }"
+    },
+    {
+      "name": "Scene Label",
+      "kind": "chip",
+      "refersTo": "scene-tag",
+      "description": "A network's label in the lantern room: its porthole mark, its name in Lamplit White, and its verdict word in the night verdict colour, lifted clear of the beam.",
+      "html": "<div class=\"ds-scene-sea\"><span class=\"ds-tag\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#0B1A2E\" stroke=\"#24405F\"/><circle cx=\"12\" cy=\"8.2\" r=\"3.4\" fill=\"#E24B4A\"/><circle cx=\"12\" cy=\"15.8\" r=\"3.4\" fill=\"#E24B4A\"/></svg><span><b>Corniche (open copy)</b><span class=\"ds-v-vulnerable\">Vulnerable</span> · may be fake</span></span><span class=\"ds-tag\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#0B1A2E\" stroke=\"#24405F\"/><circle cx=\"12\" cy=\"12\" r=\"4.6\" fill=\"#5DCAA5\"/></svg><span><b>Home · connected</b><span class=\"ds-v-secure\">Secure</span> · 84</span></span></div>",
+      "css": ".ds-scene-sea { display: flex; flex-wrap: wrap; gap: 20px 32px; padding: 24px; background: linear-gradient(var(--sea, #0E2742), var(--navy, #0B1A2E) 85%); font-family: var(--body, system-ui, -apple-system, \"Segoe UI\", Roboto, sans-serif); } .ds-tag { display: flex; gap: 7px; align-items: flex-start; max-width: 13.5em; font-size: 13.5px; line-height: 1.3; color: var(--sky-blue, #85B7EB); text-shadow: 0 1px 3px #071222; } .ds-tag svg { flex: none; width: 18px; height: 18px; margin-top: 1px; } .ds-tag b { display: block; color: var(--warm, #FAEEDA); font-weight: 600; font-size: 14.5px; } .ds-v-vulnerable { color: #F09595; } .ds-v-secure { color: var(--mark-secure, #5DCAA5); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Working Lighthouse",
+    "overview": "The site is the Manara app's own lighthouse, drawn for the web, and it is read from the top of the tower to its foot. It opens on the lantern room, an always-night scene where one gold beam sweeps a navy sea and lights networks drawn as boats. Under it, a railing runs across the page and the gallery card hangs from it, holding the lockup and the download. The tower follows as stacked cream and brick bands, and a fog band waits closed at the foot. Every figure is a working signal rather than an ornament: verdicts are buoyage topmarks, the lantern is amber, and the beam is gold. The source of truth for every colour and font is the app itself (`ui/theme/Color.kt` and `docs/design/README.md` in WSS2).\n\nThe world has two lights, as the app does. When the phone is in dark mode, the page is lit by the lighthouse: navy water, lamplit white text, and gold for the button and the accent. When the phone is in light mode, the page is known by its painted daymark: a pale sky page, navy text and rules, amber for the button and a darker amber for the accent. The signal code turns round between the two, so the strong colour is dark by day and bright by night. A few things never change: the lantern room stays night, the portholes stay navy, and the tower keeps its cream and brick paint.\n\nThe page is calm and single-column, one measure wide, with generous breaks between sections. Content takes the lighthouse's own forms (bands, ruled rows, portholes and waypoints) instead of a grid of feature cards, and the beam is the only thing that moves on its own. Arabic and English are equals: the Arabic page is the same system set right to left, with its own faces and taller lines.",
+    "keyCharacteristics": [
+      "Read from the lantern down: the night scene, the railing and gallery card, the tower bands, and the fog band at the foot.",
+      "Two lights: the daymark palette in light mode and the lantern palette in dark mode, while the lantern room stays night.",
+      "Verdicts are buoyage topmarks in navy portholes, never colour alone.",
+      "Fraunces 500 for titles, the phone's own sans for English text, El Messiri for Arabic, and Aref Ruqaa for the Arabic wordmark only.",
+      "Flat surfaces with two hanging navy shadows, pills for actions, trapezoid bands and round portholes.",
+      "One ambient motion: the beam."
+    ],
+    "rules": [
+      {
+        "name": "The Daymark Rule",
+        "body": "Every role has a day value and a night value, and the page follows the phone's light or dark mode. Strong is dark by day and bright by night: text and rails are Night Navy by day, and Lamplit White and Tower Cream by night.",
+        "section": "colors"
+      },
+      {
+        "name": "The Navy Porthole Rule",
+        "body": "Verdict marks and the lantern dot in the privacy list sit in Night Navy portholes edged in Porthole Rim, and the install step numbers sit in Night Navy discs, in both modes. Mark colours therefore never change between day and night.",
+        "section": "colors"
+      },
+      {
+        "name": "The Always Night Rule",
+        "body": "The lantern room keeps Deep Night, Night Sea and Lamplit White whatever the phone's mode. Only the page below the railing changes with the light.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Amber Action Rule",
+        "body": "The filled amber pill (Lantern Amber by day, Beam Gold by night) is the download and nothing else. Every other control is a ghost pill, a link or a band.",
+        "section": "colors"
+      },
+      {
+        "name": "The Medium Weight Rule",
+        "body": "Titles are set at 500 only, in Fraunces for English and El Messiri for Arabic, because the build ships no other title weight. Hierarchy comes from size and colour. El Messiri's 500 file also answers requests for 600 and 700, so Arabic is never synthetically bolded, and Arabic emphasis (control names in the install steps) is 500 plus accent colour.",
+        "section": "typography"
+      },
+      {
+        "name": "The Wordmark-Only Rule",
+        "body": "Aref Ruqaa sets only the word منارة. The shipped file holds those five letters and nothing else, so it cannot set any other text.",
+        "section": "typography"
+      },
+      {
+        "name": "The Tabular Numbers Rule",
+        "body": "Scores, score ranges, versions, sizes, years and step numbers are set in tabular figures.",
+        "section": "typography"
+      },
+      {
+        "name": "The Hanging Shadow Rule",
+        "body": "A lifting shadow means something hangs below the railing or waits to be pressed, so only the gallery card and the download pill carry one. The tower's day edge only outlines cream against a pale sky. Every shadow is navy, never neutral black.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do take every colour from the brand and the day and night roles above; the source of truth is the app's `ui/theme/Color.kt`.",
+      "Do give every verdict its buoyage shape and its word as well as its colour: one ball for Secure, a cone for Moderate, two stacked balls for Vulnerable, and an unlit ring for Unknown.",
+      "Do keep verdict marks and the lantern dot in Night Navy portholes edged in Porthole Rim, and step numbers in Night Navy discs, in both modes.",
+      "Do open ruled lists with a 2px Rail rule and close each row with a 1px hairline, as the legend and the privacy facts do.",
+      "Do set titles at 500 only, in Fraunces for English and El Messiri for Arabic, and set numbers in tabular figures.",
+      "Do build right to left with logical properties, mirror the scene's drawing so the lighthouse stays at the leading edge, and isolate Latin runs inside Arabic.",
+      "Do let the beam be the only ambient motion, keep state transitions to 0.25s to 0.3s on cubic-bezier(0.16, 1, 0.3, 1), and remove them under reduced motion, where the beam rests on the fake copy."
+    ],
+    "donts": [
+      "Don't draw Unknown in green or with a safe-looking mark; it is an unlit grey ring.",
+      "Don't let a tower band's colour carry meaning; cream and brick alternate by position, and danger is told by the Pennant Red mark in its porthole and the Vulnerable word.",
+      "Don't put the lantern room on the day palette; it stays night in both modes.",
+      "Don't set any text but منارة in Aref Ruqaa, or ask Fraunces for a weight other than 500.",
+      "Don't add a second filled amber button; the amber pill is the download.",
+      "Don't use neutral black shadows, or lift anything but the gallery card and the download pill."
+    ]
+  }
+}
