@@ -96,7 +96,8 @@ p { margin: 0; }
 /* ---- The lantern room: always night, like the app's navy tile ---- */
 .hero { position: relative; }
 .scene {
-  --h: clamp(320px, 52svh, 460px);  /* scene height; the lighthouse is 70% of it */
+  --h: clamp(320px, 52svh, 460px);  /* scene height */
+  --lh: 0.7;                        /* the lighthouse's height, as a share of the scene */
   --tx: max(14px, 4vw);             /* the lighthouse's distance from the leading edge */
   position: relative;
   height: var(--h);
@@ -115,19 +116,20 @@ html[dir="rtl"] .art { transform: scaleX(-1); }
     linear-gradient(var(--sea), var(--navy) 85%);
   box-shadow: 0 -1px 0 rgba(133, 183, 235, 0.28);
 }
-.lighthouse { position: absolute; left: var(--tx); bottom: 0; height: calc(var(--h) * 0.7); width: auto; z-index: 1; }
-/* The beam turns on the lantern: 50% across and 17% down the lighthouse drawing (viewBox 60 x 240). */
+.lighthouse { position: absolute; left: var(--tx); bottom: 0; height: calc(var(--h) * var(--lh)); width: auto; z-index: 1; }
+/* The beam turns on the lantern: 50% across and 17% down the lighthouse drawing (viewBox 60 x 240),
+   so x = tx + width / 2 = tx + h * lh / 8, and y = h - h * lh + 0.17 * h * lh. */
 .beam {
   position: absolute;
-  left: calc(var(--tx) + var(--h) * 0.0875);
-  top: calc(var(--h) * 0.4196);
+  left: calc(var(--tx) + var(--h) * var(--lh) / 8);
+  top: calc(var(--h) * (1 - 0.829 * var(--lh)));
   width: clamp(1000px, 210vw, 2800px);
   aspect-ratio: 1;
   translate: -50% -50%;
   rotate: var(--rest);   /* with reduced motion, the beam rests on the fake copy */
   background: conic-gradient(from 83deg, rgba(250, 199, 117, 0), rgba(250, 199, 117, 0.62) 7deg, rgba(250, 199, 117, 0) 14deg, transparent 14deg);
-  -webkit-mask-image: radial-gradient(circle closest-side, #000 4%, transparent 72%);
-  mask-image: radial-gradient(circle closest-side, #000 4%, transparent 72%);
+  -webkit-mask-image: radial-gradient(circle closest-side, var(--navy) 4%, transparent 72%);
+  mask-image: radial-gradient(circle closest-side, var(--navy) 4%, transparent 72%);
   mix-blend-mode: screen;
   pointer-events: none;
   z-index: 3;
@@ -268,10 +270,11 @@ html[lang="ar"] strong { font-weight: 500; color: var(--accent); }
 .not-android .hint { display: block; }
 
 /* ---- Sections ---- */
+/* Each section is a head (heading and intro) and its content; wide screens set them side by side. */
 section { padding-block: 64px 0; }
-section > h2 { font-size: clamp(26px, 6vw, 34px); line-height: 1.15; }
-html[lang="ar"] section > h2 { line-height: 1.5; }
-section > .intro { margin-top: 12px; color: var(--text-2); max-width: 36em; }
+section h2 { font-size: clamp(26px, 6vw, 34px); line-height: 1.15; }
+html[lang="ar"] section h2 { line-height: 1.5; }
+.head .intro { margin-top: 12px; color: var(--text-2); max-width: 36em; }
 
 /* Verdicts: the buoyage legend, each mark in its navy porthole. */
 .legend { list-style: none; margin: 26px 0 0; padding: 0; border-top: 2px solid var(--rail); }
@@ -394,13 +397,11 @@ footer { padding: 32px 0 44px; color: var(--text-2); font-size: 14px; display: f
 
 /* ---- Wider screens ---- */
 @media (min-width: 760px) {
-  .scene { --tx: 7vw; --h: clamp(400px, 53svh, 560px); }
+  .scene { --tx: 7vw; --h: clamp(300px, 44svh, 560px); }
   .lockup img { width: 56px; height: 56px; border-radius: 14px; }
   .lockup span { font-size: 30px; }
   .card .lede { font-size: 17.5px; }
-  .card .lede-short { display: none; }
-  .card .lede-long { display: block; }
-  .facts, .steps, .note, section > .intro { max-width: 64ch; }
+  .facts, .steps, .note, .head .intro { max-width: 64ch; }
   .scene figcaption { inset-inline-end: max(14px, calc((100% - var(--measure)) / 2)); bottom: 8px; }
   /* Wider seas spread the boats out, and labels move beside them. */
   .scene {
@@ -408,7 +409,7 @@ footer { padding: 32px 0 44px; color: var(--text-2); font-size: 14px; display: f
     --far-x: 74%;  --far-y: 47.5%; --far-s: 22px;
     --lib-x: 56%;  --lib-y: 48.5%; --lib-s: 30px;
     --home-x: 24%; --home-y: 53%;  --home-s: 50px;
-    --cafe-x: 66%; --cafe-y: 59%;  --cafe-s: 40px;
+    --cafe-x: 66%; --cafe-y: 66%;  --cafe-s: 40px;
     --copy-x: 40%; --copy-y: 71%;  --copy-s: 64px;
     --buoy-x: calc(40% + 72px); --buoy-y: 72.5%; --buoy-s: 16px;
   }
@@ -424,6 +425,85 @@ footer { padding: 32px 0 44px; color: var(--text-2); font-size: 14px; display: f
   .legend { display: grid; grid-template-columns: 1fr 1fr; column-gap: 32px; }
   .tower li { --step: 2.2%; padding: 20px calc(22px + 3%) 22px; }
   section { padding-top: 88px; }
+}
+
+/* ---- Laptops and up: the night scene fills the first screen. The lighthouse stands taller at
+   the leading edge, the boats ride the sea between it and the copy, and the name, headline and
+   download are set straight into the night sky, with no card. ---- */
+@media (min-width: 1100px) {
+  :root { --measure: 1120px; --hero-h: clamp(600px, 100svh, 980px); }
+  body { position: relative; }
+  .scene {
+    --h: var(--hero-h);
+    --lh: 0.8;
+    --tx: 5vw;
+    /* From the lantern, the boats lie 12 to 61 degrees down: the far boat first, the copy last. */
+    --a0: 2deg; --a1: 70deg; --rest: 62deg;
+    --far-x: 46%;  --far-y: 49%;   --far-s: 22px;
+    --lib-x: 34%;  --lib-y: 52%;   --lib-s: 28px;
+    --home-x: 26%; --home-y: 60%;  --home-s: 50px;
+    --cafe-x: 36%; --cafe-y: 69%;  --cafe-s: 40px;
+    --copy-x: 20%; --copy-y: 77%;  --copy-s: 64px;
+    --buoy-x: calc(20% + 72px); --buoy-y: 78.5%; --buoy-s: 16px;
+  }
+  .scene figcaption {
+    inset-inline-start: calc(var(--tx) + var(--h) * var(--lh) / 4 + 28px);
+    inset-inline-end: auto;
+    bottom: 18px;
+  }
+  .lang-switch { top: 22px; inset-inline-end: 24px; }
+  /* The horizon's pale line fades out before it reaches the copy set across the sea. */
+  .sea {
+    box-shadow: none;
+    background:
+      linear-gradient(90deg, rgba(133, 183, 235, 0.28) 0 44%, rgba(133, 183, 235, 0) 50%) top / 100% 1px no-repeat,
+      repeating-linear-gradient(180deg, transparent 0 15px, rgba(133, 183, 235, 0.07) 15px 16px),
+      linear-gradient(var(--sea), var(--navy) 85%);
+  }
+
+  /* The gallery leaves the flow and is set in the sky, across the sea from the lighthouse. */
+  .gallery {
+    position: absolute;
+    top: calc(var(--hero-h) * 0.12);
+    inset-inline-end: 6vw;
+    width: min(600px, 42vw);
+    margin: 0;
+    z-index: 6;
+  }
+  .gallery .railing { display: none; }
+  .gallery .card {
+    /* The sky is night in both modes, so the copy keeps the night colours. */
+    --text: var(--warm);
+    --text-2: var(--sky-blue);
+    --accent: var(--gold);
+    --button: var(--gold);
+    --on-button: var(--amber-ink);
+    color: var(--text);
+    background: none;
+    box-shadow: none;
+    padding: 0;
+    border-radius: 0;
+  }
+  .lockup { margin-bottom: 18px; }
+  .card h1 { font-size: clamp(40px, 3.4vw, 54px); }
+  .card .lede { font-size: 18px; }
+  .card .lede-short { display: none; }
+  .card .lede-long { display: block; }
+  .download { min-width: 300px; }
+
+  /* Sections: the heading stays in view while its content scrolls beside it. */
+  section, .about {
+    display: grid;
+    grid-template-columns: minmax(240px, 320px) minmax(0, 1fr);
+    column-gap: clamp(48px, 6vw, 96px);
+    align-items: start;
+  }
+  section { padding-top: 128px; }
+  section h2 { font-size: 36px; }
+  .head { position: sticky; top: 48px; }
+  .content > :first-child { margin-top: 6px; }
+  .about > .fog { grid-column: 2; margin-top: 112px; }
+  .legend { column-gap: 40px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .download, .fog summary svg { transition: none; }

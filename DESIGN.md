@@ -102,6 +102,37 @@ typography:
     fontSize: "12.5px"
     fontWeight: 400
     lineHeight: 1.3
+  display-wide:
+    fontFamily: "Fraunces, Georgia, serif"
+    fontSize: "clamp(40px, 3.4vw, 54px)"
+    fontWeight: 500
+    lineHeight: 1.12
+    letterSpacing: "-0.01em"
+  headline-wide:
+    fontFamily: "Fraunces, Georgia, serif"
+    fontSize: "36px"
+    fontWeight: 500
+    lineHeight: 1.15
+  wordmark-wide:
+    fontFamily: "Fraunces, Georgia, serif"
+    fontSize: "30px"
+    fontWeight: 500
+    lineHeight: 1
+  wordmark-arabic-lead:
+    fontFamily: "Aref Ruqaa, serif"
+    fontSize: "32px"
+    fontWeight: 400
+    lineHeight: 1
+  wordmark-latin-follow:
+    fontFamily: "Fraunces, Georgia, serif"
+    fontSize: "19px"
+    fontWeight: 500
+    lineHeight: 1
+  switch:
+    fontFamily: "system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif"
+    fontSize: "15px"
+    fontWeight: 600
+    lineHeight: 1.6
 rounded:
   pill: "999px"
   gallery-card: "18px"
@@ -314,11 +345,17 @@ The four verdicts each have a fixed mark colour, used inside navy portholes, and
 
 ## Layout
 
-The page is a single column one measure wide: 680px, centred, with 16px gutters on each side (the column is the smaller of the full width less 32px and 680px). The lantern room is the only full-bleed element. Its height is clamp(320px, 52svh, 460px) on phones and clamp(400px, 53svh, 560px) at 760px and above, so the scene keeps about half of the first screen and the gallery card, with the download, follows directly beneath it.
+Below 1100px the page is a single column one measure wide: 680px, centred, with 16px gutters on each side (the column is the smaller of the full width less 32px and 680px). The lantern room is the only full-bleed element. Its height is clamp(320px, 52svh, 460px) on phones and clamp(300px, 44svh, 560px) from 760px, so the scene keeps about half of the first screen and the gallery card, with the download, follows directly beneath it.
 
 Vertical rhythm is set by sections, not by a fixed grid. Each section starts 64px below the last (88px at 760px and above). An intro sits 12px under its headline, and the list it introduces starts 26px to 28px further down. Rows inside ruled lists have 16px to 18px of padding top and bottom. The About band sits 72px below the install section, and the footer closes the page with 32px above and 44px below, its two items spread to the ends.
 
-There is one breakpoint, at 760px. Above it, the scene grows and its boats spread out with their labels moving beside them instead of under them; the gallery card's padding grows from 20px to 26px 40px 34px; the download button becomes inline at a 320px minimum width; the full lede replaces the one-line lede; the verdict legend splits into two columns with a 32px gap; and the tower's taper widens.
+There are two breakpoints.
+
+- **760px:** the boats spread out, with their labels moving beside them instead of under them. The gallery card's padding grows from 20px to 26px 40px 34px, and the download button becomes inline at a 320px minimum width. The verdict legend splits into two columns with a 32px gap, and the tower's taper widens.
+- **1100px (laptops and up):** the lantern room fills the first screen, at clamp(600px, 100svh, 980px) tall.
+  - **Lighthouse and boats:** the lighthouse rises to 80% of the scene, 5vw from the leading edge, and the boats ride the sea between it and the copy. The beam sweeps from 2° to 70° below the horizon, so it lights the far boat first and the fake copy last.
+  - **Copy in the sky:** the gallery card leaves the flow, losing its railing, panel and shadow. The lockup, headline (display-wide), full lede, download button and version are set straight into the night sky at the scene's inline end: 12% down, 6vw in, min(600px, 42vw) wide. They keep the night colours in both modes. The horizon's pale line fades out before it reaches them.
+  - **Sections:** the measure widens to 1120px. Each section becomes two columns: its head (headline-wide, 36px, and intro) in a 240-320px column, sticky 48px from the top, and its content in the rest, with a clamp(48px, 6vw, 96px) gap. Sections start 128px apart, and the About band sits in the content column.
 
 Right to left is built in, not patched. Spacing and placement use logical properties (inline start and end), the scene's drawing is mirrored so the lighthouse stays at the leading edge, and Latin runs inside Arabic (network names, people's names, Manara.apk) are isolated. Every boat and its label are placed from the same custom properties, so the two cannot drift apart.
 

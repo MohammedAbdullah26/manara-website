@@ -96,57 +96,73 @@
     </div>
 
     <section class="wrap" aria-labelledby="answers">
-      <h2 id="answers">Four answers, and never a guess</h2>
-      <p class="intro">Every network in range gets a score from 0 to 100 before you connect, and one of four marks: the buoy shapes sailors read at sea.</p>
-      <ul class="legend">
-        <li class="secure"><svg aria-hidden="true"><use href="#m-secure" /></svg><h3>Secure <small class="num">75 to 100</small></h3><p>Nothing worrying in what Manara could check.</p></li>
-        <li class="moderate"><svg aria-hidden="true"><use href="#m-moderate" /></svg><h3>Moderate <small class="num">40 to 74</small></h3><p>Something to be careful about, such as an open network or a hidden name.</p></li>
-        <li class="vulnerable"><svg aria-hidden="true"><use href="#m-vulnerable" /></svg><h3>Vulnerable <small class="num">below 40</small></h3><p>It may be fake or unsafe. Better not to join it.</p></li>
-        <li class="unknown"><svg aria-hidden="true"><use href="#m-unknown" /></svg><h3>Unknown <small>too little checked</small></h3><p>Manara couldn't check enough, so it won't call the network safe.</p></li>
-      </ul>
+      <div class="head">
+        <h2 id="answers">Four answers, and never a guess</h2>
+        <p class="intro">Every network in range gets a score from 0 to 100 before you connect, and one of four marks: the buoy shapes sailors read at sea.</p>
+      </div>
+      <div class="content">
+        <ul class="legend">
+          <li class="secure"><svg aria-hidden="true"><use href="#m-secure" /></svg><h3>Secure <small class="num">75 to 100</small></h3><p>Nothing worrying in what Manara could check.</p></li>
+          <li class="moderate"><svg aria-hidden="true"><use href="#m-moderate" /></svg><h3>Moderate <small class="num">40 to 74</small></h3><p>Something to be careful about, such as an open network or a hidden name.</p></li>
+          <li class="vulnerable"><svg aria-hidden="true"><use href="#m-vulnerable" /></svg><h3>Vulnerable <small class="num">below 40</small></h3><p>It may be fake or unsafe. Better not to join it.</p></li>
+          <li class="unknown"><svg aria-hidden="true"><use href="#m-unknown" /></svg><h3>Unknown <small>too little checked</small></h3><p>Manara couldn't check enough, so it won't call the network safe.</p></li>
+        </ul>
+      </div>
     </section>
 
     <section class="wrap" aria-labelledby="catches">
-      <h2 id="catches">What Manara catches</h2>
-      <ul class="tower">
-        <li style="--i:1"><h3>Fake copies of a network</h3><p>An open network using the name of one that has a password is flagged before anyone joins it, and the real one is marked too.</p></li>
-        <li style="--i:2"><h3>Copies that borrow the router's address</h3><p>When one name and address keep switching security or band, two devices are sharing it. From Android 11, Manara also notices when the radio hardware itself changes.</p></li>
-        <li style="--i:3"><h3>Hotspots dressed as a business</h3><p>A phone hotspot named like a hotel, café or airport is spotted from its address and the phone maker behind it.</p></li>
-        <li style="--i:4"><h3>A five-stage check of your connection</h3><p>Once you're connected, Manara checks how the network really behaves, and only calls it Secure when enough of the checks finished.</p></li>
-        <li style="--i:5"><h3>A traffic test with on-device AI</h3><p>An optional 30-second test watches how the traffic flows. The AI model runs on your phone, and it never decides a verdict on its own.</p></li>
-        <li style="--i:6"><h3>A radar to find the router</h3><p>Locate turns your screen into a radar that guides you toward the access point.</p></li>
-        <li style="--i:7"><h3>Warnings from phones nearby</h3><p>When you turn it on, Manara phones warn each other about networks that score below 40.</p></li>
-      </ul>
-      <div class="tower-base" aria-hidden="true"></div>
+      <div class="head">
+        <h2 id="catches">What Manara catches</h2>
+      </div>
+      <div class="content">
+        <ul class="tower">
+          <li style="--i:1"><h3>Fake copies of a network</h3><p>An open network using the name of one that has a password is flagged before anyone joins it, and the real one is marked too.</p></li>
+          <li style="--i:2"><h3>Copies that borrow the router's address</h3><p>When one name and address keep switching security or band, two devices are sharing it. From Android 11, Manara also notices when the radio hardware itself changes.</p></li>
+          <li style="--i:3"><h3>Hotspots dressed as a business</h3><p>A phone hotspot named like a hotel, café or airport is spotted from its address and the phone maker behind it.</p></li>
+          <li style="--i:4"><h3>A five-stage check of your connection</h3><p>Once you're connected, Manara checks how the network really behaves, and only calls it Secure when enough of the checks finished.</p></li>
+          <li style="--i:5"><h3>A traffic test with on-device AI</h3><p>An optional 30-second test watches how the traffic flows. The AI model runs on your phone, and it never decides a verdict on its own.</p></li>
+          <li style="--i:6"><h3>A radar to find the router</h3><p>Locate turns your screen into a radar that guides you toward the access point.</p></li>
+          <li style="--i:7"><h3>Warnings from phones nearby</h3><p>When you turn it on, Manara phones warn each other about networks that score below 40.</p></li>
+        </ul>
+        <div class="tower-base" aria-hidden="true"></div>
+      </div>
     </section>
 
     <section class="wrap" aria-labelledby="privacy">
-      <h2 id="privacy">Your phone does the work</h2>
-      <ul class="facts">
-        <li>Scanning, scoring, the five-stage check and the AI model all run on the phone.</li>
-        <li>The traffic test counts packets and builds statistics about the traffic. It never stores what's inside the packets.</li>
-        <li>Nearby warnings, online reports and cloud backup stay off until you turn them on. Reports and backup need an account.</li>
-        <li>Saved networks are encrypted with a key that never leaves your phone's secure storage.</li>
-      </ul>
+      <div class="head">
+        <h2 id="privacy">Your phone does the work</h2>
+      </div>
+      <div class="content">
+        <ul class="facts">
+          <li>Scanning, scoring, the five-stage check and the AI model all run on the phone.</li>
+          <li>The traffic test counts packets and builds statistics about the traffic. It never stores what's inside the packets.</li>
+          <li>Nearby warnings, online reports and cloud backup stay off until you turn them on. Reports and backup need an account.</li>
+          <li>Saved networks are encrypted with a key that never leaves your phone's secure storage.</li>
+        </ul>
+      </div>
     </section>
 
     <section class="wrap" aria-labelledby="install">
-      <h2 id="install">Install in five steps</h2>
-      <p class="intro">Manara isn't on the Play Store, so Android asks before installing it.</p>
-      <ol class="steps">
-        <li><p>Tap <strong>Download for Android</strong> and wait for the file to finish downloading.</p></li>
-        <li><p>Open <strong>Manara.apk</strong> from the download notification, or from Downloads in your Files app.</p></li>
-        <li><p>If Android says your browser can't install apps, tap <strong>Settings</strong>, turn on <strong>Allow from this source</strong>, and go back.</p></li>
-        <li><p>Tap <strong>Install</strong>. If Play Protect warns about an unknown app, tap <strong>More details</strong>, then <strong>Install anyway</strong>.</p></li>
-        <li><p>Open Manara and choose <strong>Precise</strong> location. Android only gives Wi-Fi scan results to apps that have it.</p></li>
-      </ol>
-      <p class="note"><strong>"App not installed"?</strong> An older copy of Manara built on another computer is in the way. Uninstall it, then try again.</p>
-      <a class="download close" href="https://github.com/MohammedAbdullah26/manara-website/releases/latest/download/Manara.apk" type="application/vnd.android.package-archive">
-        <svg aria-hidden="true"><use href="#i-download" /></svg>Download for Android
-      </a>
+      <div class="head">
+        <h2 id="install">Install in five steps</h2>
+        <p class="intro">Manara isn't on the Play Store, so Android asks before installing it.</p>
+      </div>
+      <div class="content">
+        <ol class="steps">
+          <li><p>Tap <strong>Download for Android</strong> and wait for the file to finish downloading.</p></li>
+          <li><p>Open <strong>Manara.apk</strong> from the download notification, or from Downloads in your Files app.</p></li>
+          <li><p>If Android says your browser can't install apps, tap <strong>Settings</strong>, turn on <strong>Allow from this source</strong>, and go back.</p></li>
+          <li><p>Tap <strong>Install</strong>. If Play Protect warns about an unknown app, tap <strong>More details</strong>, then <strong>Install anyway</strong>.</p></li>
+          <li><p>Open Manara and choose <strong>Precise</strong> location. Android only gives Wi-Fi scan results to apps that have it.</p></li>
+        </ol>
+        <p class="note"><strong>"App not installed"?</strong> An older copy of Manara built on another computer is in the way. Uninstall it, then try again.</p>
+        <a class="download close" href="https://github.com/MohammedAbdullah26/manara-website/releases/latest/download/Manara.apk" type="application/vnd.android.package-archive">
+          <svg aria-hidden="true"><use href="#i-download" /></svg>Download for Android
+        </a>
+      </div>
     </section>
 
-    <div class="wrap">
+    <div class="wrap about">
       <details class="fog">
         <summary>About Manara<svg aria-hidden="true"><use href="#i-chevron" /></svg></summary>
         <div class="body">
